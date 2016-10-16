@@ -31,12 +31,17 @@ module.exports = {
 	module: {
 		loaders: [
 			{
-				test: /\.ts$/,
-				loaders: ['awesome-typescript-loader']
+				test: /\.html$/,
+				loader: 'raw-loader',
+				exclude: [helpers.root('index.html')]
 			},
 			{
 				test: /\.scss$/,
 				loaders: ['style', 'css', 'sass']
+			},
+			{
+				test: /\.ts$/,
+				loaders: ['awesome-typescript-loader']
 			}
 		]
 	},

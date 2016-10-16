@@ -4,5 +4,5 @@ import {Component} from '@angular/core';
 	selector: 'app-main',
 	template: require('./app.component.html')
 })
-export class AppComponent {
+export class App {
 }

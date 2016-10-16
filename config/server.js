@@ -1,12 +1,8 @@
 const express = require('express');
 const webpack = require('webpack');
 const WebpackDevServer = require('webpack-dev-server');
-
 const config = require('./webpack.js');
 const helpers = require('./helpers');
-
-console.log(config);
-
 const HOST = '127.0.0.1';
 const PORT = 3000;
 config.entry.app.unshift(`webpack-dev-server/client?http://${HOST}:${PORT}/`, `webpack/hot/dev-server`);
