@@ -1,10 +1,11 @@
 import {Component} from '@angular/core';
 
 @Component({
-	template: require('./header.component.ts')
+	selector: 'site-header',
+	template: require('./header.cmp.html')
 })
 
-export class Header {
+export class Header_Cmp {
 	constructor() {
 		console.log('header constructor!');
 	}

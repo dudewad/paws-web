@@ -1,14 +1,20 @@
 import {NgModule} from '@angular/core';
 import {
-	Header
+	Footer_Cmp,
+	Header_Cmp,
+	MainMenu_Cmp
 } from './component';
 
 @NgModule({
 	declarations: [
-		Header
+		Footer_Cmp,
+		Header_Cmp,
+		MainMenu_Cmp
 	],
 	exports: [
-		Header
+		Footer_Cmp,
+		Header_Cmp,
+		MainMenu_Cmp
 	]
 })
 export class PawsCommon {

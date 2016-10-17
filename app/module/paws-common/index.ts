@@ -1,1 +1,1 @@
-export * from './paws-common.module';
+export * from './paws-common.mdl';
