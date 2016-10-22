@@ -8,9 +8,8 @@ You can download/install it here: [www.nodejs.org](www.nodejs.org)
 Once Node is installed, setup is easy. In a terminal/command prompt, navigate to the project root directory and run:
 
 `npm install` \<enter\>
-`typings install` \<enter\>
 
-Both of these commands will download some things to your project directory.
+This will download some things to your project directory.
 That's it!
 
 ## Running the dev server
