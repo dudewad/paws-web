@@ -5,4 +5,5 @@ import {Component} from '@angular/core';
 	template: require('./app.cmp.html')
 })
 export class App_Cmp {
+
 }
