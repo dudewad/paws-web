@@ -7,6 +7,9 @@ export const Constants = {
 	},
 	routeMap: {
 		//The key for the route map's "default" option
-		routeDataDefaultKey: 'default'
+		routeDataDefaultKey: 'default',
+		//A suffix at the end of component names that is consistent across the project. This will allow for more
+		//user-friendly names in the routemap files but will require it to be added to the names when parsing them.
+		componentExtension: '_Cmp'
 	}
 };

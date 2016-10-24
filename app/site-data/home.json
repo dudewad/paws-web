@@ -5,6 +5,6 @@
 		"mainMenu": true
 	},
 	"components": [
-		"Hero_Cmp"
+		"Hero"
 	]
 }

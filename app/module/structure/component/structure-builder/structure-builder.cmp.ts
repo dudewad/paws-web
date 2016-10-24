@@ -12,10 +12,7 @@ import {
 	NavigationEnd,
 	Router
 } from '@angular/router';
-import {
-	Observable,
-	Subscription
-} from 'rxjs';
+import {Subscription} from 'rxjs';
 
 import {App_Const} from '../../../paws-common/';
 import {
@@ -32,6 +29,7 @@ export class StructureBuilder_Cmp implements OnInit, OnDestroy {
 	private routeMap: any;
 	//Routes called before the routeMap has loaded will be stored here.
 	private pendingRoute: any;
+	//Register all components that could be instantiated dynamically here. Match the name to the token exactly.
 	private componentRegistry: any = {
 		'Hero_Cmp': Hero_Cmp
 	};
@@ -51,7 +49,7 @@ export class StructureBuilder_Cmp implements OnInit, OnDestroy {
 	ngOnInit() {
 		let routeMapUrl = this.constants.url.dataRoot + this.constants.url.routeDataFilesMap;
 
-		this.routerEventSub = Observable.from(this.router.events)
+		this.routerEventSub = this.router.events
 			.filter(evt => evt instanceof NavigationEnd)
 			.subscribe(evt => {
 				this.onNavigationEnd(evt);
@@ -81,7 +79,9 @@ export class StructureBuilder_Cmp implements OnInit, OnDestroy {
 		let configComponents = config.components;
 		if(config.hasOwnProperty('components') && configComponents.length){
 			for(let i = 0, len = configComponents.length; i < len; i++){
-				this.componentResolver.resolveComponentFactory(this.componentRegistry[configComponents[i]]);
+				let comp = configComponents[i] + this.constants.routeMap.componentExtension;
+				let factory = this.componentResolver.resolveComponentFactory(this.componentRegistry[comp]);
+				//this.structureContainer.createComponent(factory);
 			}
 		}
 	}

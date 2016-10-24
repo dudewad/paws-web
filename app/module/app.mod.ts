@@ -1,5 +1,7 @@
 import {NgModule}               from '@angular/core';
 import {BrowserModule}          from '@angular/platform-browser';
+import 'rxjs/add/operator/filter';
+import 'rxjs/add/operator/map';
 
 import {Routing} from           './app.routes.ts';
 import {App_Cmp}                from './app.cmp';
