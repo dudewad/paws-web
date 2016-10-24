@@ -7,6 +7,5 @@ import {Component} from '@angular/core';
 
 export class MainMenu_Cmp {
 	constructor() {
-		console.log('main menu constructor!');
 	}
 }

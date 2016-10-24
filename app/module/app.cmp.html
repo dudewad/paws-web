@@ -1,4 +1,4 @@
-<site-header></site-header>
-<main-menu></main-menu>
+<main-menu *ngIf="state.mainMenu.enabled"></main-menu>
+<site-header *ngIf="state.header.enabled"></site-header>
 <router-outlet></router-outlet>
-<site-footer></site-footer>
+<site-footer *ngIf="state.footer.enabled"></site-footer>

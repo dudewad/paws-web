@@ -1,0 +1,10 @@
+{
+	"config": {
+		"header": true,
+		"footer": true,
+		"mainMenu": true
+	},
+	"components": [
+		"Hero_Cmp"
+	]
+}

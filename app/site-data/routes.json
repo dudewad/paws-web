@@ -1,0 +1,6 @@
+{
+	"routes": {
+		"default": "home.json",
+		"/": "home.json"
+	}
+}

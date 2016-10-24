@@ -7,6 +7,5 @@ import {Component} from '@angular/core';
 
 export class Header_Cmp {
 	constructor() {
-		console.log('header constructor!');
 	}
 }

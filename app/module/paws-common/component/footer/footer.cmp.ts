@@ -7,6 +7,5 @@ import {Component} from '@angular/core';
 
 export class Footer_Cmp {
 	constructor() {
-		console.log('footer constructor!');
 	}
 }
