@@ -4,7 +4,8 @@ var webpack = require('webpack');
 /**
  * Plugins
  */
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 /**
  * Webpack Constants
@@ -37,8 +38,18 @@ module.exports = {
 			},
 			{
 				test: /\.scss$/,
-				loaders: ['style', 'css', 'sass']
+				loader: 'raw-loader!postcss-loader!sass-loader',
+				/*exclude: [
+					helpers.root('app/app.scss')
+				]*/
 			},
+			/*{
+				test: /\.scss$/,
+				loader: ExtractTextPlugin.extract('raw-loader!postcss-loader!sass-loader'),
+				include: [
+					helpers.root('app/app.scss')
+				]
+			},*/
 			{
 				test: /\.ts$/,
 				loaders: ['awesome-typescript-loader']
@@ -65,7 +76,7 @@ module.exports = {
 			chunksSortMode: 'dependency',
 			filename: 'index.html',
 			template: 'index.html'
-		}),
+		})
 	],
 	resolve: {
 		extensions: ['', '.ts', '.js'],

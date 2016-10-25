@@ -1,0 +1,25 @@
+$breakpoint-xs: 480px;
+$breakpoint-sm: 768px;
+$breakpoint-md: 992px;
+$breakpoint-lg: 1200px;
+$breakpoint-xl: 1400px;
+
+$base-colors:(
+	black:                          #000,
+	brand-primary:                  #AC8E22,
+	brand-secondary:                #449FC3,
+	gray-darkest:                   #333,
+	gray-dark:                      #666,
+	gray-medium:                    #999,
+	gray-medium-light:              #ADADAD,
+	gray-light:                     #CCC,
+	gray-lightest:                  #F4F4F4,
+	white:                          #FFF
+);
+
+$colors: (
+	button-bg:                      map-get($base-colors, brand-primary),
+	button-active-bg:               darken(map-get($base-colors, brand-primary), 10%),
+	button-color:                   map-get($base-colors, white),
+	button-hover-bg:                darken(map-get($base-colors, brand-primary), 5%)
+)

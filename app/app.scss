@@ -1,0 +1,33 @@
+@import './style/variables';
+
+html,
+body{
+	margin: 0;
+	font-size: 14px;
+}
+
+button,
+.button {
+	padding: .75em 1.5em;
+	background: map-get($colors, button-bg);
+	color: map-get($colors, button-color);
+	border: none;
+	border-radius: 5px;
+	font-size: 1.2em;
+	cursor: pointer;
+	outline: none;
+
+	&:hover {
+		background: map-get($colors, button-hover-bg);
+	}
+
+	&:active {
+		background: map-get($colors, button-active-bg);
+	}
+}
+
+.content-wrapper {
+	padding: 0 1em;
+	max-width: 1250px;
+	margin: 0 auto;
+}

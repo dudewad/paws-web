@@ -1,14 +1,12 @@
 import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 import {HttpModule} from '@angular/http';
 
 import {
 	Hero_Cmp,
 	StructureBuilder_Cmp
 } from './component';
-import {
-	PageManager_Svc,
-	Renderer_Svc
-} from './service';
+import {Renderer_Svc} from './service';
 
 @NgModule({
 	declarations: [
@@ -22,11 +20,11 @@ import {
 		StructureBuilder_Cmp
 	],
 	imports: [
+		CommonModule,
 		HttpModule
 	],
 	providers: [
-		Renderer_Svc,
-		PageManager_Svc
+		Renderer_Svc
 	]
 })
 

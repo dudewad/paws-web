@@ -9,8 +9,8 @@ import {Constants}              from './app-constants.const';
 import {
 	App_Const,
 	PawsCommon_Mod
-} from './paws-common';
-import {Structure_Mod} from './structure';
+} from './module/paws-common';
+import {Structure_Mod} from './module/structure';
 
 @NgModule({
 	declarations: [

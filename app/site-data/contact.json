@@ -8,14 +8,10 @@
 		{
 			"type": "Hero",
 			"config": {
-				"class": [
-					"bg-full",
-					"bg-dogs-1"
-				]
 			},
 			"content": {
-				"title": "A Subdued Dog Bar",
-				"subtitle": "Awesome Bellingham beer, dogs, and good times"
+				"title": "Contact Page!",
+				"subtitle": "Now you can get in touch with us."
 			}
 		}
 	]
