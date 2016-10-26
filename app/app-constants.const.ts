@@ -1,5 +1,8 @@
-export const Constants = {
+var $ = require("jquery");
+
+let consts = {
 	url: {
+		contentRoot: 'app/content',
 		//Root for site page/component structure data (i.e. site definition JSON files)
 		dataRoot: 'app/site-data/',
 		//This file maps the route paths (routes) to data files for configuration of the site
@@ -13,3 +16,17 @@ export const Constants = {
 		componentExtension: '_Cmp'
 	}
 };
+
+/**
+ * Prod mode constant overrides
+ */
+if(ENV === 'production') {
+	consts = $.extend(true, consts, {
+		url: {
+			contentRoot: 'contents.pawsforabeer.com',
+			dataRoot: 'site-data/',
+		}
+	});
+}
+
+export const Constants = consts;

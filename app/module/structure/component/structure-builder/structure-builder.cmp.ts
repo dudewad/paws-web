@@ -96,7 +96,7 @@ export class StructureBuilder_Cmp implements OnInit, OnDestroy {
 		}
 
 		let path:string = route.url;
-
+console.log(route.url);
 		if(route.url[0] === '/'){
 			path = route.url.substring(1);
 		}

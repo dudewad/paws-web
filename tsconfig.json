@@ -13,7 +13,8 @@
 		"./node_modules"
 	],
 	"filesGlob": [
-		"./app/**/*.ts"
+		"./app/**/*.ts",
+		"./app/custom-typings.d.ts"
 	],
 	"awesomeTypescriptLoaderOptions": {
 		"resolveGlobs": true,
