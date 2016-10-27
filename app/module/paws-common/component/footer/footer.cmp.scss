@@ -1,5 +1,13 @@
+@import '../../../../style/variables';
+
 footer {
 	.grass {
-		background: url('');
+		height: 66px;
+		background: url('./app/content/image/footer-grass.png') repeat-x top center;
+	}
+
+	.content {
+		color: map-get($colors, footer-color);
+		background: map-get($colors, footer-bg);
 	}
 }

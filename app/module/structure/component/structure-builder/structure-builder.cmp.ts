@@ -1,9 +1,9 @@
 import {Component, Inject, OnDestroy, OnInit, ViewChild, ViewContainerRef} from '@angular/core';
 import {Http} from '@angular/http';
-import { NavigationEnd, Router} from '@angular/router';
+import {NavigationEnd, Router} from '@angular/router';
 import {Subscription} from 'rxjs';
 
-import {App_Const} from '../../../paws-common/';
+import {App_Const, Config_Svc} from '../../../paws-common/';
 import {PageConfig_Mdl, Renderer_Svc} from '../../';
 
 @Component({
@@ -13,40 +13,29 @@ import {PageConfig_Mdl, Renderer_Svc} from '../../';
 export class StructureBuilder_Cmp implements OnInit, OnDestroy {
 	private routerEventSub: Subscription;
 	//Once loaded, will contain the mapping of site routes/paths to json files
-	private routeMap: any;
+	private config: any;
 	//Routes called before the routeMap has loaded will be stored here.
-	private pendingRoute: any;
+	private currentRoute:any;
+	private configSvcUnsubscriber:any;
 	//View child contains the rendered content for the structure
 	@ViewChild('structure', {read: ViewContainerRef}) structureContainer: ViewContainerRef;
 
-	constructor(private router: Router,
+	constructor(private configSvc:Config_Svc,
+				private router: Router,
 	            private http: Http,
 	            private renderer: Renderer_Svc,
 				@Inject(App_Const) private constants) {
 	}
 
 	ngOnInit() {
-		let routeMapUrl = this.constants.url.dataRoot + this.constants.url.routeDataFilesMap;
+		this.config = this.configSvc.getConfig(this.constants.configTypes.app);
+		this.configSvcUnsubscriber = this.configSvc.onConfigUpdate(this.onConfigChange.bind(this));
 
 		this.routerEventSub = this.router.events
 			.filter(evt => evt instanceof NavigationEnd)
 			.subscribe(evt => {
 				this.onNavigationEnd(evt);
 			});
-
-		this.http.get(routeMapUrl)
-			.map(res => res.json())
-			.subscribe(result => {
-					this.routeMap = result;
-					if (this.pendingRoute) {
-						this.onNavigationEnd(this.pendingRoute);
-						this.pendingRoute = null;
-					}
-				},
-				error => {
-					//TODO: Don't throw an error, catch it and redirect to a 404/"omg its broken" page.
-					throw new Error(`Critical error - could not load site route map. The resource '${routeMapUrl}' could not be found.`);
-				});
 	}
 
 	/**
@@ -54,9 +43,9 @@ export class StructureBuilder_Cmp implements OnInit, OnDestroy {
 	 *
 	 * @param path
 	 */
-	private getPageDataFromPath(path: string) {
+	private getPageData(path: string) {
 		let url = this.constants.url.dataRoot;
-		let routes = this.routeMap.routes;
+		let routes = this.config.routes;
 		let defaultKey = this.constants.routeMap.routeDataDefaultKey;
 
 		path = path[0] === '/' ? path : '/' + path;
@@ -90,18 +79,32 @@ export class StructureBuilder_Cmp implements OnInit, OnDestroy {
 	 */
 	private onNavigationEnd(route: any) {
 		//Without routeMap loaded, we can't match routes to data files. Set it to pending.
-		if(!this.routeMap) {
-			this.pendingRoute = route;
+		if(!this.config) {
+			this.currentRoute = route;
 			return;
 		}
 
 		let path:string = route.url;
-console.log(route.url);
 		if(route.url[0] === '/'){
 			path = route.url.substring(1);
 		}
 
-		this.getPageDataFromPath(path);
+		this.currentRoute = route;
+		this.getPageData(path);
+	}
+
+	/**
+	 * Handler for when a config loads/is changed
+	 *
+	 * @param type
+	 *
+	 * @param config
+	 */
+	private onConfigChange(type, config) {
+		if(type === this.constants.configTypes.app) {
+			this.config = config;
+			this.onNavigationEnd(this.currentRoute);
+		}
 	}
 
 	/**
@@ -116,5 +119,6 @@ console.log(route.url);
 
 	ngOnDestroy() {
 		this.routerEventSub.unsubscribe();
+		this.configSvcUnsubscriber();
 	}
 }

@@ -1,0 +1,14 @@
+{
+	"component": {
+		"header": {
+			"content": {
+				"cta": "How to Join"
+			}
+		},
+		"footer": {
+			"content": {
+				"footerContent": "This is a footer!"
+			}
+		}
+	}
+}

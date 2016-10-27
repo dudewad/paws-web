@@ -1,12 +1,16 @@
 var $ = require("jquery");
 
 let consts = {
+	configTypes:{
+		app: 'app',
+		global: 'global'
+	},
 	url: {
 		contentRoot: 'app/content',
 		//Root for site page/component structure data (i.e. site definition JSON files)
 		dataRoot: 'app/site-data/',
 		//This file maps the route paths (routes) to data files for configuration of the site
-		routeDataFilesMap: 'routes.json'
+		config: 'config.json'
 	},
 	routeMap: {
 		//The key for the route map's "default" option

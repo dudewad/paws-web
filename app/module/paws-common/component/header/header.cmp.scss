@@ -1,0 +1,20 @@
+@import '../../../../style/bootstrap-custom/bootstrap';
+
+header {
+	@include clearfix();
+	padding: 2em;
+
+	.controls {
+		float: left;
+
+		.menu-toggle {
+			font-size: 2em;
+			cursor:pointer;
+			margin-right: .5em;
+		}
+	}
+
+	.actions {
+		float: right;
+	}
+}
