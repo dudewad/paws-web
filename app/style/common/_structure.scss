@@ -1,0 +1,17 @@
+@import '../bootstrap-custom/bootstrap';
+
+.structure {
+	&.compensate-header {
+		padding-top: 75px;
+	}
+
+	&.compensate-footer {
+		padding-bottom: 66px;
+	}
+
+	@media screen and (min-width: $screen-sm-min) {
+		&.compensate-header {
+			padding-top: 100px;
+		}
+	}
+}

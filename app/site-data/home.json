@@ -9,9 +9,13 @@
 			"type": "Hero",
 			"config": {
 				"class": [
-					"bg-full",
-					"bg-dogs-1"
-				]
+					"structure",
+					"compensate-header"
+				],
+				"background": {
+					"style": "image",
+					"value": "image/blade-bg-crosby-san-juans.jpg"
+				}
 			},
 			"content": {
 				"title": "A Subdued Dog Bar",

@@ -7,4 +7,15 @@ html,
 body{
 	margin: 0;
 	font-size: 14px;
+	height: 100%;
+}
+
+app-main {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.site-content-wrapper {
+	flex: 1;
 }

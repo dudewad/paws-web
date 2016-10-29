@@ -6,7 +6,7 @@ let consts = {
 		global: 'global'
 	},
 	url: {
-		contentRoot: 'app/content',
+		contentRoot: 'app/content/',
 		//Root for site page/component structure data (i.e. site definition JSON files)
 		dataRoot: 'app/site-data/',
 		//This file maps the route paths (routes) to data files for configuration of the site
@@ -18,6 +18,12 @@ let consts = {
 		//A suffix at the end of component names that is consistent across the project. This will allow for more
 		//user-friendly names in the routemap files but will require it to be added to the names when parsing them.
 		componentExtension: '_Cmp'
+	},
+	componentConfig: {
+		backgroundStyles: {
+			image: 'image',
+			color: 'color'
+		}
 	}
 };
 

@@ -1,24 +1,19 @@
-import {Component, ElementRef, OnInit} from '@angular/core';
+import {Component, Inject, OnInit} from '@angular/core';
 
-import {StructureComponent_Inf} from "../../interface/structure-component.inf";
+import {App_Const} from '../../../paws-common/';
+import {StructureBase_Cmp} from "../../";
 
 @Component({
 	selector: 'hero',
 	template: require('./hero.cmp.html'),
 	styles: [require('./hero.cmp.scss')]
 })
-export class Hero_Cmp implements OnInit, StructureComponent_Inf{
-	private content:any = {};
-	private config: any = {};
-
-	constructor(private el: ElementRef) {
+export class Hero_Cmp extends StructureBase_Cmp implements OnInit{
+	constructor(@Inject(App_Const) protected constants) {
+		super(constants);
 	}
 
 	ngOnInit() {
-	}
-
-	public setConfig(config:any) {
-		this.content = config.content;
-		this.config = config.config;
+		console.log("init hero");
 	}
 }

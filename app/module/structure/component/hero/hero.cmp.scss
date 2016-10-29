@@ -1,5 +1,25 @@
+@import '../../../../style/bootstrap-custom/bootstrap';
+
 .hero {
-	h1{
-		color:#F00;
+	.structure-content {
+		padding: 2em 1em;
+	}
+
+	@media screen and (min-width: $screen-sm-min) {
+		.structure-content {
+			padding: 3em 1em;
+		}
+	}
+
+	@media screen and (min-width: $screen-md-min) {
+		.structure-content {
+			padding: 5em 1em;
+		}
+	}
+
+	@media screen and (min-width: $screen-lg-min) {
+		.structure-content {
+			padding: 7em 1em;
+		}
 	}
 }

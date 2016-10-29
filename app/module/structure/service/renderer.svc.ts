@@ -1,7 +1,7 @@
 import {Inject,	Injectable,	ComponentFactoryResolver, ViewContainerRef} from '@angular/core';
 
 import {App_Const} from '../../paws-common/';
-import {Hero_Cmp, PageConfig_Mdl, StructureComponent_Inf} from '../';
+import {Hero_Cmp, PageConfig_Mdl, StructureBase_Cmp} from '../';
 
 @Injectable()
 export class Renderer_Svc {
@@ -23,7 +23,7 @@ export class Renderer_Svc {
 				let conf = configComponents[i];
 				let factory = this.resolver.resolveComponentFactory(this.componentRegistry[conf.type + this.compExt]);
 				let newComp = parent.createComponent(factory);
-				let inst = <StructureComponent_Inf>newComp.instance;
+				let inst = <StructureBase_Cmp>newComp.instance;
 
 				inst.setConfig(conf);
 			}
