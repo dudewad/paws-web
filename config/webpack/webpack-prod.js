@@ -67,9 +67,10 @@ module.exports = webpackMerge(commonConfig, {
 				keep_fnames: true
 			},
 			compress: {
-				screw_ie8: true
+				screw_ie8: true,
+				warnings: false
 			},
-			comments: false
+			comments: false,
 		}),
 	],
 	resolve: {
