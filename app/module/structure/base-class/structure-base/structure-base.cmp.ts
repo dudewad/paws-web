@@ -1,9 +1,11 @@
 import {Inject} from '@angular/core';
+
 import {App_Const} from '../../../paws-common/';
 
 export class StructureBase_Cmp {
 	private config: any = {};
 	private content: any = {};
+	private baseClasses:Array<string> = ['structure'];
 
 	constructor(@Inject(App_Const) protected constants){
 	}
@@ -12,6 +14,10 @@ export class StructureBase_Cmp {
 		this.content = config.content;
 		this.config = config.config;
 		this.setBackground();
+	}
+
+	private getClasses() {
+		return this.baseClasses.concat(this.config.class);
 	}
 
 	private setBackground() {

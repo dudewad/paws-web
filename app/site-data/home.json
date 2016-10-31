@@ -9,7 +9,6 @@
 			"type": "Hero",
 			"config": {
 				"class": [
-					"structure",
 					"compensate-header"
 				],
 				"background": {
@@ -18,8 +17,13 @@
 				}
 			},
 			"content": {
-				"title": "A Subdued Dog Bar",
-				"subtitle": "Awesome Bellingham beer, dogs, and good times"
+				"title": "A Subdued <span class='accent'>Dog</span> Bar",
+				"subtitle": "Awesome Bellingham <span class='accent'>beer,</span> <span class='accent'>dogs,</span> and <span class='accent'>good times</span>",
+				"body": "We serve delicious beer in cans so that your dog can come into the bar without violating health code by pooping all over the place, particularly in peoples' food.",
+				"cta": {
+					"text": "Learn More",
+					"href": "/contact"
+				}
 			}
 		}
 	]

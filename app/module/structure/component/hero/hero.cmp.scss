@@ -1,25 +1,38 @@
 @import '../../../../style/bootstrap-custom/bootstrap';
 
 .hero {
+	text-align: center;
+
 	.structure-content {
 		padding: 2em 1em;
 	}
 
+	h2 {
+		font-size: 1.25em;
+	}
+
+	p {
+		max-width: 600px;
+		margin: 2em auto 2em auto;
+	}
+
+	@media screen and (min-width: $screen-xs-min) {
+		font-size: 1.25em;
+	}
+
 	@media screen and (min-width: $screen-sm-min) {
-		.structure-content {
-			padding: 3em 1em;
+		font-size: 2em;
+
+		h2 {
+			font-size: 1em;
 		}
 	}
 
 	@media screen and (min-width: $screen-md-min) {
-		.structure-content {
-			padding: 5em 1em;
-		}
+		font-size: 2.25em;
 	}
 
 	@media screen and (min-width: $screen-lg-min) {
-		.structure-content {
-			padding: 7em 1em;
-		}
+		font-size: 3.2em;
 	}
 }

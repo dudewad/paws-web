@@ -1,6 +1,7 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {HttpModule} from '@angular/http';
+import {BrowserModule} from '@angular/platform-browser';
 
 import {
 	Hero_Cmp,
@@ -20,6 +21,7 @@ import {Renderer_Svc} from './service';
 		StructureBuilder_Cmp
 	],
 	imports: [
+		BrowserModule,
 		CommonModule,
 		HttpModule
 	],

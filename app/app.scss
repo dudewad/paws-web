@@ -1,5 +1,6 @@
 @import './style/bootstrap-custom/bootstrap';
 @import './style/variables';
+@import './style/common/font';
 @import './style/generated/pawsIcon';
 @import './style/common/all';
 
@@ -8,6 +9,7 @@ body{
 	margin: 0;
 	font-size: 14px;
 	height: 100%;
+	font-family: $body-font-family;
 }
 
 app-main {
@@ -16,6 +18,53 @@ app-main {
 	flex-direction: column;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $titling-font-family;
+	letter-spacing: .07em;
+	margin: 0;
+}
+
+h1 {
+	font-size: 2.5em;
+}
+
+h2 {
+	font-size: 1.25em;
+}
+
+p {
+	font-size: 1.2rem;
+}
+
 .site-content-wrapper {
 	flex: 1;
+}
+
+.accent {
+	color: map-get($colors, copy-accent-color);
+}
+
+@media screen and (min-width: $screen-xs-min) {
+
+}
+
+@media screen and (min-width: $screen-sm-min) {
+	p {
+		font-size: 1.4rem;
+	}
+}
+
+@media screen and (min-width: $screen-md-min) {
+
+}
+
+@media screen and (min-width: $screen-lg-min) {
+	p {
+		font-size: 1.5rem;
+	}
 }
