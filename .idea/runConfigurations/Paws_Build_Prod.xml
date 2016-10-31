@@ -1,0 +1,21 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="Paws Build Prod" type="js.build_tools.npm" factoryName="npm" singleton="false">
+    <package-json value="$PROJECT_DIR$/package.json" />
+    <command value="run-script" />
+    <scripts>
+      <script value="build:prod" />
+    </scripts>
+    <node-interpreter value="project" />
+    <envs />
+    <method>
+      <option name="GruntBeforeRunTask" enabled="true">
+        <node-interpreter value="project" />
+        <gruntfile value="$PROJECT_DIR$/Gruntfile.js" />
+        <tasks>
+          <task value="webfont" />
+        </tasks>
+        <envs />
+      </option>
+    </method>
+  </configuration>
+</component>
