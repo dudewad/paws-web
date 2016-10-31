@@ -71,6 +71,9 @@ module.exports = {
 			}
 		])
 	],
+	postcss: function () {
+		return [];
+	},
 	resolve: {
 		extensions: ['', '.ts', '.js'],
 		root: helpers.root(),
