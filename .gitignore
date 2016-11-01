@@ -7,7 +7,7 @@
 # They're for generated files. These items shouldn't exist when you pull the repo, but might later when scripts run.
 /dist/
 npm-debug.log
-/app/content/font/**/*.eot
-/app/content/font/**/*.ttf
-/app/content/font/**/*.woff
+/app/assets/font/**/*.eot
+/app/assets/font/**/*.ttf
+/app/assets/font/**/*.woff
 /app/style/generated

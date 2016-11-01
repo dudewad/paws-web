@@ -6,7 +6,7 @@ let consts = {
 		global: 'global'
 	},
 	url: {
-		contentRoot: 'app/content/',
+		contentRoot: 'app/assets/',
 		//Root for site page/component structure data (i.e. site definition JSON files)
 		dataRoot: 'app/site-data/',
 		//This file maps the route paths (routes) to data files for configuration of the site
@@ -28,13 +28,25 @@ let consts = {
 };
 
 /**
+ * Staging mode constant overrides
+ */
+if(ENV === 'staging') {
+	consts = $.extend(true, consts, {
+		url: {
+			contentRoot: '/staging/assets/',
+			dataRoot: '/staging/site-data/',
+		}
+	});
+}
+
+/**
  * Prod mode constant overrides
  */
 if(ENV === 'production') {
 	consts = $.extend(true, consts, {
 		url: {
-			contentRoot: 'contents.pawsforabeer.com',
-			dataRoot: 'site-data/',
+			contentRoot: '//contents.pawsforabeer.com/',
+			dataRoot: '/site-data/',
 		}
 	});
 }

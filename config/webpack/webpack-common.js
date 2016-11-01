@@ -5,7 +5,6 @@ var webpack = require('webpack');
  * Plugins
  */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 /**
  * Webpack Constants
@@ -47,29 +46,13 @@ module.exports = {
 		clearImmediate: false,
 		setImmediate: false
 	},
-	output: {
-		path: helpers.root('prod/'),
-		filename: '[name].bundle.js',
-		sourceMapFilename: '[file].map',
-		chunkFilename: '[id].chunk.js'
-	},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
 		new HtmlWebpackPlugin({
 			chunksSortMode: 'dependency',
 			filename: 'index.html',
 			template: 'index.html'
-		}),
-		new CopyWebpackPlugin([
-			{
-				from: 'app/content',
-				to: 'content'
-			},
-			{
-				from: 'app/site-data',
-				to: 'site-data'
-			}
-		])
+		})
 	],
 	postcss: function () {
 		return [];

@@ -21,7 +21,7 @@ const METADATA = webpackMerge(commonConfig.metadata, {
 	ENV: ENV
 });
 
-const outputBase = 'dist/prod';
+const outputBase = 'dist/staging';
 const paths = {
 	output: {
 		content: helpers.root(path.join(outputBase, 'assets')),
