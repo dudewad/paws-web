@@ -13,15 +13,107 @@
 				],
 				"background": {
 					"style": "image",
-					"value": "image/blade-bg-crosby-san-juans.jpg"
+					"value": "image/structure-bg-bar-1.jpg"
 				}
 			},
 			"content": {
 				"title": "A Subdued <span class='accent'>Dog</span> Bar",
-				"subtitle": "Awesome Bellingham <span class='accent'>beer,</span> <span class='accent'>dogs,</span> and <span class='accent'>good times</span>",
+				"cta": {
+					"text": "Contact Us",
+					"href": "/contact"
+				}
+			}
+		},
+		{
+			"type": "Hero",
+			"config": {
+				"class": [],
+				"background": {
+					"style": "image",
+					"value": "image/structure-bg-bar-paw-1.jpg"
+				}
+			},
+			"content": {
+				"title": "A Subdued <span class='accent'>Dog</span> Bar",
+				"subtitle": "Awesome Bellingham <span class='accent'>beer, dogs,</span> and <span class='accent'>good times</span>",
 				"body": "We serve delicious beer in cans so that your dog can come into the bar without violating health code by pooping all over the place, particularly in peoples' food.",
 				"cta": {
 					"text": "Learn More",
+					"href": "/contact"
+				}
+			}
+		},
+		{
+			"type": "TextImage",
+			"config": {
+				"class": [
+					"content-left",
+					"text-centered"
+				],
+				"background": {}
+			},
+			"content": {
+				"title": "We're so awesome",
+				"body": "Dogs are like cats in that they are animals. But not all animals can be dogs, such as cats, for instance. They are nothing like dogs, except for the fact that dogs are like THEM, which might sound backwards, but that's because you're stupid. Thanks for playing!",
+				"image": "content/image/structure-bg-bar-paw-2.jpg",
+				"cta": {
+					"text": "Awesome",
+					"href": "/contact"
+				}
+			}
+		},
+		{
+			"type": "TextImage",
+			"config": {
+				"class": [
+					"content-right",
+					"text-centered"
+				],
+				"background": {}
+			},
+			"content": {
+				"title": "Seriously, we are Awesome",
+				"body": "Back on the dogs vs cats thing. Literally, cats are really bad ass. In theory. The problem is, they're actually huge dickheads. Evolutionarily that doesn't make a lot of sense. It's 2016, we don't live in the jungle, bitches. Stop being dicks to everyone and we'll all like you a little more. Take dogs as an example. Kbye.",
+				"image": "content/image/structure-bg-crosby-1.jpg",
+				"cta": {
+					"text": "Awesome",
+					"href": "/contact"
+				}
+			}
+		},
+		{
+			"type": "TextImage",
+			"config": {
+				"class": [
+					"content-left"
+				],
+				"background": {}
+			},
+			"content": {
+				"title": "We're so awesome",
+				"body": "Dogs are like cats in that they are animals. But not all animals can be dogs, such as cats, for instance. They are nothing like dogs, except for the fact that dogs are like THEM, which might sound backwards, but that's because you're stupid. Thanks for playing!",
+				"image": "content/image/structure-bg-bar-wood-1.jpg",
+				"cta": {
+					"text": "Awesome",
+					"href": "/contact"
+				}
+			}
+		},
+		{
+			"type": "TextImage",
+			"config": {
+				"class": [
+					"content-right",
+					"compensate-footer"
+				],
+				"background": {}
+			},
+			"content": {
+				"title": "Seriously, we are Awesome",
+				"body": "Back on the dogs vs cats thing. Literally, cats are really bad ass. In theory. The problem is, they're actually huge dickheads. Evolutionarily that doesn't make a lot of sense. It's 2016, we don't live in the jungle, bitches. Stop being dicks to everyone and we'll all like you a little more. Take dogs as an example. Kbye.",
+				"image": "content/image/structure-bg-tables-1.jpg",
+				"cta": {
+					"text": "Awesome",
 					"href": "/contact"
 				}
 			}

@@ -1,10 +1,12 @@
 @import '../../../../style/bootstrap-custom/bootstrap';
+@import '../../../../style/variables';
 
 .hero {
 	text-align: center;
+	color: map-get($colors, header-color);
 
 	.structure-content {
-		padding: 2em 1em;
+		padding: 2em 0;
 	}
 
 	h2 {
@@ -13,7 +15,12 @@
 
 	p {
 		max-width: 600px;
-		margin: 2em auto 2em auto;
+		margin: 2em auto 0 auto;
+		font-size: 1.2rem;
+	}
+
+	.button {
+		margin: 2em auto 0 auto;
 	}
 
 	@media screen and (min-width: $screen-xs-min) {
@@ -26,6 +33,10 @@
 		h2 {
 			font-size: 1em;
 		}
+
+		p {
+			font-size: 1.4rem;
+		}
 	}
 
 	@media screen and (min-width: $screen-md-min) {
@@ -34,5 +45,9 @@
 
 	@media screen and (min-width: $screen-lg-min) {
 		font-size: 3.2em;
+
+		p {
+			font-size: 1.5rem;
+		}
 	}
 }

@@ -18,7 +18,8 @@ $colors: (
 	button-hover-bg:                darken(map-get($base-colors, brand-primary), 5%),
 	copy-accent-color:              map-get($base-colors, brand-primary),
 	footer-bg:                      map-get($base-colors, brand-secondary),
-	footer-color:                   map-get($base-colors, white)
+	footer-color:                   map-get($base-colors, white),
+	header-color:                   map-get($base-colors, white)
 );
 
 $titling-font-family: bebas, 'Times New Roman', sans-serif;

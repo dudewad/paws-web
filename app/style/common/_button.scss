@@ -9,7 +9,7 @@ button,
 	border: none;
 	border-radius: 5px;
 	font-family: $titling-font-family;
-	font-size: 1.2rem;
+	font-size: 1rem;
 	cursor: pointer;
 	outline: none;
 	text-decoration: none;
@@ -20,5 +20,13 @@ button,
 
 	&:active {
 		background: map-get($colors, button-active-bg);
+	}
+
+	@media screen and(min-width: $screen-md-min) {
+		font-size: 1.1rem;
+	}
+
+	@media screen and(min-width: $screen-lg-min) {
+		font-size: 1.2rem;
 	}
 }

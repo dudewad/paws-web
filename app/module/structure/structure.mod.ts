@@ -5,17 +5,20 @@ import {BrowserModule} from '@angular/platform-browser';
 
 import {
 	Hero_Cmp,
-	StructureBuilder_Cmp
+	StructureBuilder_Cmp,
+	TextImage_Cmp
 } from './component';
 import {Renderer_Svc} from './service';
 
 @NgModule({
 	declarations: [
 		Hero_Cmp,
-		StructureBuilder_Cmp
+		StructureBuilder_Cmp,
+		TextImage_Cmp
 	],
 	entryComponents: [
-		Hero_Cmp
+		Hero_Cmp,
+		TextImage_Cmp
 	],
 	exports: [
 		StructureBuilder_Cmp

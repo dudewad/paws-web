@@ -1,4 +1,4 @@
-import {Component, Inject, OnDestroy, OnInit, ViewChild, ViewContainerRef} from '@angular/core';
+import {Component, Inject, OnDestroy, OnInit, ViewChild, ViewContainerRef, ViewEncapsulation} from '@angular/core';
 import {Http} from '@angular/http';
 import {NavigationEnd, Router} from '@angular/router';
 import {Subscription} from 'rxjs';
@@ -8,7 +8,9 @@ import {PageConfig_Mdl, Renderer_Svc} from '../../';
 
 @Component({
 	selector: 'structure',
-	template: require('./structure-builder.cmp.html')
+	template: require('./structure-builder.cmp.html'),
+	styles: [require('./structure-builder.cmp.scss')],
+	encapsulation: ViewEncapsulation.None
 })
 export class StructureBuilder_Cmp implements OnInit, OnDestroy {
 	private routerEventSub: Subscription;

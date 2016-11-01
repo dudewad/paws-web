@@ -1,6 +1,5 @@
 @import './style/bootstrap-custom/bootstrap';
 @import './style/variables';
-@import './style/common/font';
 @import './style/generated/pawsIcon';
 @import './style/common/all';
 
@@ -49,22 +48,26 @@ p {
 	color: map-get($colors, copy-accent-color);
 }
 
-@media screen and (min-width: $screen-xs-min) {
+.disp-table {
+	display: table;
+}
 
+.v-center {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+@media screen and (min-width: $screen-xs-min) {
 }
 
 @media screen and (min-width: $screen-sm-min) {
-	p {
-		font-size: 1.4rem;
-	}
 }
 
 @media screen and (min-width: $screen-md-min) {
-
 }
 
 @media screen and (min-width: $screen-lg-min) {
 	p {
-		font-size: 1.5rem;
+		font-size: 1.4rem;
 	}
 }
