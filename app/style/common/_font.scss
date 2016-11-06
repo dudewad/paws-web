@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Alice');
 
+$url: $urlContentRoot + $urlFontRelativePath;
+
 @font-face {
 	font-family: "bebas";
-	src: url("content/font/bebas/bebas.woff") format("woff"),
-	url("content/font/bebas/bebas.ttf") format("truetype");
+	src: url("#{$url}/bebas/bebas.woff") format("woff"),
+	url("#{$url}/bebas/bebas.ttf") format("truetype");
 	font-weight: normal;
 	font-style: normal;
 }

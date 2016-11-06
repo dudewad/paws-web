@@ -1,5 +1,6 @@
 const helpers = require('./helpers');
 var webpack = require('webpack');
+var pkg = require(helpers.root() + '/package.json');
 
 /**
  * Plugins
@@ -9,7 +10,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 /**
  * Webpack Constants
  */
-const METADATA = {};
+const METADATA = {
+	FONT_RELATIVE_PATH: pkg.url.relative.font,
+	IMAGE_RELATIVE_PATH: pkg.url.relative.image
+};
 
 /**
  * Webpack configuration

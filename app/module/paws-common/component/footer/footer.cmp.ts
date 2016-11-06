@@ -1,6 +1,6 @@
 import {Component, Inject, OnInit, OnDestroy} from '@angular/core';
 
-import {Config_Svc, App_Const} from "../../";
+import {App_Const, Config_Svc} from "../../";
 
 @Component({
 	selector: 'site-footer',

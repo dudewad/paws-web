@@ -1,11 +1,13 @@
 @import '../../../../style/variables';
 
+$imageRoot: $urlContentRoot + $urlImageRelativePath;
+
 footer {
 	margin-top: -66px;
 
 	.grass {
 		height: 66px;
-		background: url('./app/content/image/footer-grass.png') repeat-x top center;
+		background: url('#{$imageRoot}footer-grass.png') repeat-x top center;
 	}
 
 	.content {

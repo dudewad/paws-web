@@ -1,4 +1,5 @@
 @import '../../../../style/bootstrap-custom/bootstrap';
+@import '../../../../style/variables';
 
 header {
 	@include clearfix();
@@ -6,8 +7,18 @@ header {
 	width: 100%;
 	padding: 2em;
 
+	.logo {
+		display: inline-block;
+		cursor: pointer;
+
+		.pawsIcon {
+			font-size: 5em;
+		}
+	}
+
 	.controls {
 		float: left;
+		color: map-get($colors, header-color);
 
 		.menu-toggle {
 			font-size: 2em;

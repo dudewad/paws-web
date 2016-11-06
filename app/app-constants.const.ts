@@ -6,11 +6,12 @@ let consts = {
 		global: 'global'
 	},
 	url: {
-		contentRoot: 'app/assets/',
+		contentRoot: CONTENT_ROOT,
 		//Root for site page/component structure data (i.e. site definition JSON files)
-		dataRoot: 'app/site-data/',
+		dataRoot: DATA_ROOT,
 		//This file maps the route paths (routes) to data files for configuration of the site
-		config: 'config.json'
+		config: 'config.json',
+		imageRelativePath: IMAGE_RELATIVE_PATH
 	},
 	routeMap: {
 		//The key for the route map's "default" option
@@ -26,29 +27,5 @@ let consts = {
 		}
 	}
 };
-
-/**
- * Staging mode constant overrides
- */
-if(ENV === 'staging') {
-	consts = $.extend(true, consts, {
-		url: {
-			contentRoot: '/staging/assets/',
-			dataRoot: '/staging/site-data/',
-		}
-	});
-}
-
-/**
- * Prod mode constant overrides
- */
-if(ENV === 'production') {
-	consts = $.extend(true, consts, {
-		url: {
-			contentRoot: '//contents.pawsforabeer.com/',
-			dataRoot: '/site-data/',
-		}
-	});
-}
 
 export const Constants = consts;

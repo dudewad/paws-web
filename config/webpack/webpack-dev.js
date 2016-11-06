@@ -2,6 +2,7 @@ const helpers = require('./helpers');
 const webpackMerge = require('webpack-merge');
 var webpack = require('webpack');
 var commonConfig = require('./webpack-common');
+var pkg = require(helpers.root() + '/package.json');
 
 /**
  * Plugins
@@ -13,8 +14,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
  * Webpack Constants
  */
 const ENV = process.env.ENV = process.env.NODE_ENV = 'development';
-const METADATA = webpackMerge(commonConfig.metadata, {
-	ENV: ENV
+const METADATA = webpackMerge(commonConfig.METADATA, {
+	ENV: ENV,
+	CONTENT_ROOT: pkg.url.dev.contentRoot,
+	DATA_ROOT: pkg.url.dev.dataRoot
 });
 
 /**
@@ -34,7 +37,6 @@ module.exports = webpackMerge(commonConfig, {
 		loaders: [
 			{
 				test: /\.scss$/,
-				data: `$env: ${ENV};`,
 				loader: 'raw-loader!postcss-loader!sass-loader'
 			}
 		]
@@ -64,6 +66,10 @@ module.exports = webpackMerge(commonConfig, {
 			'ENV': JSON.stringify(METADATA.ENV),
 			'VERSION': JSON.stringify(METADATA.version + '-dev'),
 			'VERSION_DTM': JSON.stringify(METADATA.versionDtm),
+			'CONTENT_ROOT': JSON.stringify(METADATA.CONTENT_ROOT),
+			'DATA_ROOT': JSON.stringify(METADATA.DATA_ROOT),
+			'FONT_RELATIVE_PATH': JSON.stringify(METADATA.FONT_RELATIVE_PATH),
+			'IMAGE_RELATIVE_PATH': JSON.stringify(METADATA.IMAGE_RELATIVE_PATH),
 			'process.env': {
 				'ENV': JSON.stringify(METADATA.ENV),
 				'NODE_ENV': JSON.stringify(METADATA.ENV)
@@ -75,6 +81,12 @@ module.exports = webpackMerge(commonConfig, {
 		root: helpers.root(),
 		modulesDirectories: ['node_modules'],
 		alias: {}
+	},
+	sassLoader: {
+		data: '$env: "' + ENV + '";'
+			+ '$urlContentRoot: "' + METADATA.CONTENT_ROOT + '";'
+			+ '$urlFontRelativePath: "' + METADATA.FONT_RELATIVE_PATH + '";'
+			+ '$urlImageRelativePath: "' + METADATA.IMAGE_RELATIVE_PATH + '";'
 	},
 	tslint: {
 		emitErrors: false,

@@ -9,6 +9,7 @@ import {
 	TextImage_Cmp
 } from './component';
 import {Renderer_Svc} from './service';
+import {Asset_Svc} from "../paws-common";
 
 @NgModule({
 	declarations: [
@@ -29,6 +30,7 @@ import {Renderer_Svc} from './service';
 		HttpModule
 	],
 	providers: [
+		Asset_Svc,
 		Renderer_Svc
 	]
 })
