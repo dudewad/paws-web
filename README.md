@@ -14,7 +14,7 @@ You can download/install it here: [www.nodejs.org](www.nodejs.org)
 
 Once Node is installed, installing the actual project dependencies is easy. In a terminal/command prompt, navigate to the project root directory and run:
 
-`npm install` \<enter\>
+`npm install`
 
 This will download a pile of dependencies to your project directory. You can now forget that this is even a thing, since you only have to do this once to set up the project.
 
@@ -29,7 +29,7 @@ Congratulations. Your dependencies are ready to rock.
 Now that all of the project dependencies are up and running, you'll also need to generate the "generated" files from the source you have. This is also easy!
 In that same command window, run:
 
-`grunt webfont` \<enter\>
+`grunt build:dev`
 
 That will generate a few font files that are needed for running the site, and stop errors from occurring when you're running the dev server.
 Note, you will need to run this command if you ever decide to add new icons to the source font directory, since it's the command that builds the actual font and CSS styleshets to make the icon font usable.
@@ -44,11 +44,18 @@ Once the module bundler (Webpack) finishes starting up, you can access the site 
 
 This webpack instance is configured to automatically refresh whenever file changes occur. You shouldn't need to refresh the browser as you work.
 
-## Generating Production Code
-Need production code? Easy!
+## Generating Staging and Production Code
+Need staging or production code? Easy!
 
-In the root directory of the project, run the following in a command prompt/terminal:
+In the root directory of the project, run the appropriate of the following two sets of commands in a command prompt/terminal:
 
+
+### Build for staing:
+`grunt build:staging`
+`npm run build:staging`
+
+### Build for Prod:
+`grunt build:prod`
 `npm run build:prod`
 
-This will generate compiled source files in the `/dist/` directory. All of these files should be uploaded to the server as-is. However, the `/dist/content/` directory may need to be uploaded to the `contents.pawsforabeer.com` subdomain separately depending on deployment procedure.
+This will generate compiled source files in the `/dist/staging` or `/dist/prod/` directory. All of these files should be uploaded to the server as-is. However, the `/content/` directory of the prod build may need to be uploaded to the `contents.pawsforabeer.com` subdomain separately depending on deployment procedure.

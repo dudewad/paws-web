@@ -1,0 +1,65 @@
+@import '../../../../style/bootstrap-custom/bootstrap-no-output';
+@import '../../../../style/variables';
+
+.ribbon {
+	position:relative;
+
+	iframe {
+		border: 0;
+		width:100%;
+		height:300px;
+	}
+
+	p {
+		margin-bottom: 0;
+	}
+
+	.ribbon-content {
+		padding: 2em;
+		color: map-get($colors, ribbon-color);
+		background: map-get($colors, ribbon-bg);
+	}
+
+	@media screen and (max-width: $screen-xs-max) {
+		.container,
+		.row,
+		.ribbon-container {
+			padding: 0;
+		}
+	}
+
+	@media screen and (min-width: $screen-sm-min) {
+		iframe {
+			height: 400px;
+		}
+
+		.ribbon-content {
+			display: inline-block;
+		}
+
+		.structure-content {
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	@media screen and (min-width: $screen-sm-min) {
+		iframe {
+			height: 500px;
+		}
+	}
+
+	@media screen and (min-width: $screen-md-min) {
+		iframe {
+			height: 550px;
+		}
+	}
+
+	@media screen and (min-width: $screen-lg-min) {
+		iframe {
+			height: 600px;
+		}
+	}
+}

@@ -1,4 +1,4 @@
-@import '../../../../style/bootstrap-custom/bootstrap';
+@import '../../../../style/bootstrap-custom/bootstrap-no-output';
 
 .structure {
 	.compensate-header {
@@ -6,7 +6,7 @@
 	}
 
 	.compensate-footer {
-		padding-bottom: 66px;
+		padding-bottom: 125px;
 	}
 
 	@media screen and (min-width: $screen-sm-min) {

@@ -4,9 +4,9 @@ import {DomSanitizer} from '@angular/platform-browser';
 import {App_Const, Asset_Svc} from '../../../paws-common/';
 
 @Component({})
-export class StructureBase_Cmp {
-	private config: any = {};
-	private content: any = {};
+export abstract class StructureBase_Cmp {
+	protected config: any = {};
+	protected content: any = {};
 	private url: any = {};
 
 	constructor(protected sanitizer: DomSanitizer,
@@ -26,11 +26,15 @@ export class StructureBase_Cmp {
 		return this.sanitizer.bypassSecurityTrustHtml(str);
 	}
 
-	public getAssetURL(filename) {
-		return this.assetSvc.getAssetURL(`${filename}`);
+	public getAssetUrl(filename) {
+		return this.assetSvc.getAssetUrl(`${filename}`);
 	}
 
 	private setBackground() {
+		if(!this.config.background) {
+			return;
+		}
+
 		let styles = this.constants.componentConfig.backgroundStyles;
 		let bg = this.config.background;
 
@@ -39,7 +43,7 @@ export class StructureBase_Cmp {
 				case styles.image:
 					//let bgUrl = this.getAssetURL(bg.value);
 					this.config.style = {
-						'background-image': `url("${this.getAssetURL(bg.value)}")`,
+						'background-image': `url("${this.getAssetUrl(bg.value)}")`,
 						'background-size': bg['size'] || 'cover',
 						'background-position': bg['position'] || 'center'
 					};
@@ -55,7 +59,6 @@ export class StructureBase_Cmp {
 					for (var style in styles) {
 						console.log(`${style}`);
 					}
-
 					break;
 			}
 		}

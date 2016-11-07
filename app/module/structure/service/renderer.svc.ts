@@ -1,7 +1,7 @@
 import {Inject,	Injectable,	ComponentFactoryResolver, ViewContainerRef} from '@angular/core';
 
 import {App_Const} from '../../paws-common/';
-import {Hero_Cmp, PageConfig_Mdl, StructureBase_Cmp, TextImage_Cmp} from '../';
+import {Hero_Cmp, PageConfig_Mdl, StructureBase_Cmp, Ribbon_Cmp, TextImage_Cmp, TileSet_Cmp} from '../';
 
 @Injectable()
 export class Renderer_Svc {
@@ -9,7 +9,9 @@ export class Renderer_Svc {
 	//Register all components that could be instantiated dynamically here. Match the name to the token exactly.
 	private componentRegistry:any = {
 		'Hero_Cmp': Hero_Cmp,
-		'TextImage_Cmp': TextImage_Cmp
+		'Ribbon_Cmp': Ribbon_Cmp,
+		'TextImage_Cmp': TextImage_Cmp,
+		'TileSet_Cmp': TileSet_Cmp,
 	};
 
 	constructor(private resolver: ComponentFactoryResolver,

@@ -8,9 +8,7 @@
 		{
 			"type": "Hero",
 			"config": {
-				"class": [
-					"compensate-header"
-				],
+				"class": [],
 				"background": {
 					"style": "image",
 					"value": "/structure-bg-bar-1.jpg"
@@ -18,24 +16,7 @@
 			},
 			"content": {
 				"title": "A Subdued <span class='accent'>Dog</span> Bar",
-				"cta": {
-					"text": "Contact Us",
-					"href": "/contact"
-				}
-			}
-		},
-		{
-			"type": "Hero",
-			"config": {
-				"class": [],
-				"background": {
-					"style": "image",
-					"value": "/structure-bg-bar-paw-1.jpg"
-				}
-			},
-			"content": {
-				"title": "A Subdued <span class='accent'>Dog</span> Bar",
-				"subtitle": "Awesome Bellingham <span class='accent'>beer, dogs,</span> and <span class='accent'>good times</span>",
+				"subtitle": "Awesome Bellingham beer, dogs, and good times",
 				"body": "We serve delicious beer in cans so that your dog can come into the bar without violating health code by pooping all over the place, particularly in peoples' food.",
 				"cta": {
 					"text": "Learn More",
@@ -49,8 +30,7 @@
 				"class": [
 					"content-left",
 					"text-centered"
-				],
-				"background": {}
+				]
 			},
 			"content": {
 				"title": "We're so awesome",
@@ -68,8 +48,7 @@
 				"class": [
 					"content-right",
 					"text-centered"
-				],
-				"background": {}
+				]
 			},
 			"content": {
 				"title": "Seriously, we are Awesome",
@@ -82,40 +61,56 @@
 			}
 		},
 		{
-			"type": "TextImage",
+			"type": "Ribbon",
 			"config": {
 				"class": [
-					"content-left"
-				],
-				"background": {}
+					"contact-ribbon"
+				]
 			},
 			"content": {
-				"title": "We're so awesome",
-				"body": "Dogs are like cats in that they are animals. But not all animals can be dogs, such as cats, for instance. They are nothing like dogs, except for the fact that dogs are like THEM, which might sound backwards, but that's because you're stupid. Thanks for playing!",
-				"image": "/structure-bg-bar-wood-1.jpg",
-				"cta": {
-					"text": "Awesome",
-					"href": "/contact"
-				}
+				"title": "Contact Us",
+				"body": "501 Harris Avenue<br>Bellingham, WA 98225<br>360-704-0013",
+				"iframe": "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJG0wMvSKihVQRpndcABnnMLw&key=AIzaSyAw7X6OqbKGKCTznZOaujyJUvfuRmYEAb8&zoom=16"
 			}
 		},
 		{
-			"type": "TextImage",
+			"type": "TileSet",
 			"config": {
 				"class": [
 					"content-right",
 					"compensate-footer"
-				],
-				"background": {}
+				]
 			},
 			"content": {
-				"title": "Seriously, we are Awesome",
-				"body": "Back on the dogs vs cats thing. Literally, cats are really bad ass. In theory. The problem is, they're actually huge dickheads. Evolutionarily that doesn't make a lot of sense. It's 2016, we don't live in the jungle, bitches. Stop being dicks to everyone and we'll all like you a little more. Take dogs as an example. Kbye.",
-				"image": "/structure-bg-tables-1.jpg",
-				"cta": {
-					"text": "Awesome",
-					"href": "/contact"
-				}
+				"tiles": [
+					{
+						"title": "Excellence in dogginess",
+						"body": "Why wouldn't you, they asked. Because No.",
+						"image": "/structure-bg-bar-paw-1.jpg",
+						"cta": {
+							"text": "Awesome",
+							"href": "/contact"
+						}
+					},
+					{
+						"title": "Awesomeness in dogginess",
+						"body": "But of course not, I had said. But perhaps.",
+						"image": "/structure-bg-crosby-1.jpg",
+						"cta": {
+							"text": "Sweet",
+							"href": "/contact"
+						}
+					},
+					{
+						"title": "Dogs are fun, ",
+						"body": "If I could, then sometimes, who knows?",
+						"image": "/structure-bg-tables-1.jpg",
+						"cta": {
+							"text": "Righto",
+							"href": "/contact"
+						}
+					}
+				]
 			}
 		}
 	]

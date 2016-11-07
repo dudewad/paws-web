@@ -36,8 +36,15 @@ h2 {
 	font-size: 1.25em;
 }
 
-p {
+p,
+li {
 	font-size: 1.2rem;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
 }
 
 .site-content-wrapper {

@@ -32,4 +32,8 @@ export class Footer_Cmp implements OnInit, OnDestroy{
 	ngOnDestroy() {
 		this.configSvcUnsubscriber();
 	}
+
+	private getDate() {
+		return new Date().getFullYear();
+	}
 }

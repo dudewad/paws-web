@@ -1,100 +1,101 @@
 {
-	"name": "paws-web",
-	"version": "1.0.0",
-	"description": "Paws for a Beer website",
-	"main": "index.js",
-	"dependencies": {
-		"@angular/common": "~2.1.0",
-		"@angular/compiler": "~2.1.0",
-		"@angular/core": "~2.1.0",
-		"@angular/forms": "~2.1.0",
-		"@angular/http": "~2.1.0",
-		"@angular/platform-browser": "~2.1.0",
-		"@angular/platform-browser-dynamic": "~2.1.0",
-		"@angular/router": "~3.1.0",
-		"@types/webpack": "^1.12.35",
-		"angular-in-memory-web-api": "~0.1.5",
-		"bootstrap": "^3.3.7",
-		"core-js": "^2.4.1",
-		"jquery": "^3.1.1",
-		"reflect-metadata": "^0.1.8",
-		"rxjs": "5.0.0-beta.12",
-		"systemjs": "0.19.39",
-		"zone.js": "^0.6.25"
-	},
-	"devDependencies": {
-		"@types/core-js": "^0.9.34",
-		"@types/jquery": "^2.0.33",
-		"@types/node": "^6.0.45",
-		"awesome-typescript-loader": "^2.2.4",
-		"compression-webpack-plugin": "^0.3.2",
-		"copy-webpack-plugin": "^4.0.0",
-		"css-loader": "^0.25.0",
-		"extract-text-webpack-plugin": "^1.0.1",
-		"glob": "^7.1.1",
-		"grunt": "^1.0.1",
-		"grunt-webfont": "^1.6.0",
-		"html-webpack-plugin": "^2.22.0",
-		"load-grunt-tasks": "^3.5.2",
-		"node-sass": "^3.10.1",
-		"postcss-loader": "^1.0.0",
-		"raw-loader": "^0.5.1",
-		"sass-loader": "^4.0.2",
-		"style-loader": "^0.13.1",
-		"typescript": "^2.0.3",
-		"webpack": "^1.13.2",
-		"webpack-dev-server": "^1.16.2",
-		"webpack-md5-hash": "0.0.5",
-		"webpack-merge": "^0.15.0"
-	},
-	"directories": {
-		"app": "app/",
-		"scssRoot": "app/style/",
-		"fontRoot": "app/assets/font/",
-		"grunt": {
-			"aliasTask": "config/grunt/aliasTask/",
-			"taskConfig": "config/grunt/taskConfig/"
-		}
-	},
-	"scripts": {
-		"build:prod": "webpack --config config/webpack/webpack-prod.js --profile --colors --display-error-details --display-cached --bail --verbose",
-		"build:staging": "webpack --config config/webpack/webpack-staging.js --profile --colors --display-error-details --display-cached --bail --verbose",
-		"start": "node ./config/webpack/server-dev.js"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git+ssh://git@github.com/dudewad/paws-web.git"
-	},
-	"keywords": [
-		"Paws",
-		"for",
-		"a",
-		"Beer",
-		"dog",
-		"bar"
-	],
-	"url": {
-		"dev": {
-			"dataRoot": "/app/site-data/",
-			"contentRoot": "/app/assets/"
-		},
-		"staging": {
-			"dataRoot": "/staging/site-data/",
-			"contentRoot": "/staging/assets/"
-		},
-		"prod": {
-			"dataRoot": "/site-data/",
-			"contentRoot": "//contents.pawsforabeer.com/"
-		},
-		"relative": {
-			"font": "/font/",
-			"image": "/image/"
-		}
-	},
-	"author": "Layton Miller",
-	"license": "MIT",
-	"bugs": {
-		"url": "https://github.com/dudewad/paws-web/issues"
-	},
-	"homepage": "https://github.com/dudewad/paws-web#readme"
+  "name": "paws-web",
+  "version": "1.0.0",
+  "description": "Paws for a Beer website",
+  "main": "index.js",
+  "dependencies": {
+    "@angular/common": "~2.1.0",
+    "@angular/compiler": "~2.1.0",
+    "@angular/core": "~2.1.0",
+    "@angular/forms": "~2.1.0",
+    "@angular/http": "~2.1.0",
+    "@angular/platform-browser": "~2.1.0",
+    "@angular/platform-browser-dynamic": "~2.1.0",
+    "@angular/router": "~3.1.0",
+    "@types/webpack": "^1.12.35",
+    "angular-in-memory-web-api": "~0.1.5",
+    "bootstrap": "^3.3.7",
+    "core-js": "^2.4.1",
+    "jquery": "^3.1.1",
+    "reflect-metadata": "^0.1.8",
+    "rxjs": "5.0.0-beta.12",
+    "systemjs": "0.19.39",
+    "zone.js": "^0.6.25"
+  },
+  "devDependencies": {
+    "@types/core-js": "^0.9.34",
+    "@types/jquery": "^2.0.33",
+    "@types/node": "^6.0.45",
+    "awesome-typescript-loader": "^2.2.4",
+    "compression-webpack-plugin": "^0.3.2",
+    "copy-webpack-plugin": "^4.0.0",
+    "css-loader": "^0.25.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "glob": "^7.1.1",
+    "grunt": "^1.0.1",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-webfont": "^1.6.0",
+    "html-webpack-plugin": "^2.22.0",
+    "load-grunt-tasks": "^3.5.2",
+    "node-sass": "^3.10.1",
+    "postcss-loader": "^1.0.0",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^4.0.2",
+    "style-loader": "^0.13.1",
+    "typescript": "^2.0.3",
+    "webpack": "^1.13.2",
+    "webpack-dev-server": "^1.16.2",
+    "webpack-md5-hash": "0.0.5",
+    "webpack-merge": "^0.15.0"
+  },
+  "directories": {
+    "app": "app/",
+    "scssRoot": "app/style/",
+    "fontRoot": "app/assets/font/",
+    "grunt": {
+      "aliasTask": "config/grunt/aliasTask/",
+      "taskConfig": "config/grunt/taskConfig/"
+    }
+  },
+  "scripts": {
+    "build:prod": "webpack --config config/webpack/webpack-prod.js --profile --colors --display-error-details --display-cached --bail --verbose",
+    "build:staging": "webpack --config config/webpack/webpack-staging.js --profile --colors --display-error-details --display-cached --bail --verbose",
+    "start": "node ./config/webpack/server-dev.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/dudewad/paws-web.git"
+  },
+  "keywords": [
+    "Paws",
+    "for",
+    "a",
+    "Beer",
+    "dog",
+    "bar"
+  ],
+  "url": {
+    "dev": {
+      "dataRoot": "/app/site-data/",
+      "contentRoot": "/app/assets/"
+    },
+    "staging": {
+      "dataRoot": "/staging/site-data/",
+      "contentRoot": "/staging/assets/"
+    },
+    "prod": {
+      "dataRoot": "/site-data/",
+      "contentRoot": "//contents.pawsforabeer.com/"
+    },
+    "relative": {
+      "font": "/font/",
+      "image": "/image/"
+    }
+  },
+  "author": "Layton Miller",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dudewad/paws-web/issues"
+  },
+  "homepage": "https://github.com/dudewad/paws-web#readme"
 }

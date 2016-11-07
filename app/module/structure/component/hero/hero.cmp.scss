@@ -1,4 +1,4 @@
-@import '../../../../style/bootstrap-custom/bootstrap';
+@import '../../../../style/bootstrap-custom/bootstrap-no-output';
 @import '../../../../style/variables';
 
 .hero {
@@ -6,7 +6,7 @@
 	color: map-get($colors, header-color);
 
 	.structure-content {
-		padding: 2em 0;
+		padding: 4em 0;
 	}
 
 	h2 {

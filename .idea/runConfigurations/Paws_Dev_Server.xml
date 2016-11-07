@@ -12,7 +12,7 @@
         <node-interpreter value="project" />
         <gruntfile value="$PROJECT_DIR$/Gruntfile.js" />
         <tasks>
-          <task value="webfont:dev" />
+          <task value="build:dev" />
         </tasks>
         <envs />
       </option>

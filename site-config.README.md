@@ -191,3 +191,21 @@ The content section has the following options:
  - `body` Paragraph-style text. Try to keep it short to medium in length.
  - `image` An image reference to use, which will be juxtaposed against the content.
  - `cta` See the CTA description in the general content section for more.
+ 
+ ### TileSet \[NEEDS UPDATING\]
+ 
+ Description: 
+ 
+ Example configuration:
+ 
+ ```
+
+ ```
+ 
+ Custom configuration options include:
+ 
+  - 
+ 
+ The content section has the following options:
+ 
+ - 

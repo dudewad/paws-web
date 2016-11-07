@@ -6,7 +6,9 @@ import {BrowserModule} from '@angular/platform-browser';
 import {
 	Hero_Cmp,
 	StructureBuilder_Cmp,
-	TextImage_Cmp
+	Ribbon_Cmp,
+	TextImage_Cmp,
+	TileSet_Cmp
 } from './component';
 import {Renderer_Svc} from './service';
 import {Asset_Svc} from "../paws-common";
@@ -15,11 +17,15 @@ import {Asset_Svc} from "../paws-common";
 	declarations: [
 		Hero_Cmp,
 		StructureBuilder_Cmp,
-		TextImage_Cmp
+		Ribbon_Cmp,
+		TextImage_Cmp,
+		TileSet_Cmp
 	],
 	entryComponents: [
 		Hero_Cmp,
-		TextImage_Cmp
+		Ribbon_Cmp,
+		TextImage_Cmp,
+		TileSet_Cmp
 	],
 	exports: [
 		StructureBuilder_Cmp
