@@ -8,7 +8,9 @@
 		{
 			"type": "Hero",
 			"config": {
-				"class": [],
+				"class": [
+					"compensate-header"
+				],
 				"background": {
 					"style": "image",
 					"value": "/structure-bg-bar-1.jpg"

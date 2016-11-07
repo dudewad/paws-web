@@ -12,7 +12,7 @@ header {
 		cursor: pointer;
 
 		.pawsIcon {
-			font-size: 5em;
+			font-size: 3em;
 		}
 	}
 
@@ -29,5 +29,14 @@ header {
 
 	.actions {
 		float: right;
+	}
+
+	@media screen and (min-width: $screen-sm-min) {
+
+		.logo {
+			.pawsIcon {
+				font-size: 5em;
+			}
+		}
 	}
 }
