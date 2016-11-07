@@ -21,7 +21,7 @@ const ENV = process.env.ENV = process.env.NODE_ENV = 'production';
 const METADATA = webpackMerge(commonConfig.METADATA, {
 	ENV: ENV,
 	CONTENT_ROOT: pkg.url.staging.contentRoot,
-	DATA_ROOT: pkg.url.dev.dataRoot
+	DATA_ROOT: pkg.url.staging.dataRoot
 });
 
 const outputBase = 'dist/staging';
@@ -44,11 +44,6 @@ module.exports = webpackMerge(commonConfig, {
 		loaders: [
 			{
 				test: /\.scss$/,
-				data: `
-					$env: ${ENV}; 
-					$urlContentRoot: ${pkg.url.contentRootStaging};
-					$urlFontRelativePath: ${pkg.url.fontRelativePath};
-				`,
 				loader: 'raw-loader!postcss-loader!sass-loader'
 			}
 		]

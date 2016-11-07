@@ -44,11 +44,6 @@ module.exports = webpackMerge(commonConfig, {
 		loaders: [
 			{
 				test: /\.scss$/,
-				data: `
-					$env: ${ENV};
-					$urlContentRoot: ${pkg.url.contentRootProd};
-					$urlFontRelativePath: ${pkg.url.fontRelativePath};
-				`,
 				loader: 'raw-loader!postcss-loader!sass-loader'
 			}
 		]

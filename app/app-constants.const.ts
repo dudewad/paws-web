@@ -28,4 +28,8 @@ let consts = {
 	}
 };
 
+console.log('###########');
+console.log(consts);
+console.log('###########');
+
 export const Constants = consts;
