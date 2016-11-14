@@ -75,6 +75,7 @@ module.exports = webpackMerge(commonConfig, {
 		]),
 
 		new DefinePlugin({
+			'BREAKPOINT': METADATA.BREAKPOINT,
 			'ENV': JSON.stringify(METADATA.ENV),
 			'VERSION': JSON.stringify(METADATA.version),
 			'VERSION_DTM': JSON.stringify(METADATA.versionDtm),
@@ -108,7 +109,7 @@ module.exports = webpackMerge(commonConfig, {
 		alias: {}
 	},
 	sassLoader: {
-		data: '$env: "' + ENV + '";'
+		data: commonConfig.sassLoaderBaseData + ';$env: "' + ENV + '";'
 			+ '$urlContentRoot: "' + METADATA.CONTENT_ROOT + '";'
 			+ '$urlFontRelativePath: "' + METADATA.FONT_RELATIVE_PATH + '";'
 			+ '$urlImageRelativePath: "' + METADATA.IMAGE_RELATIVE_PATH + '";'

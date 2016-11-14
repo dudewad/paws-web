@@ -1,3 +1,4 @@
+declare var BREAKPOINT: any;
 declare var ENV: string;
 declare var VERSION: string;
 declare var VERSION_DTM: string;

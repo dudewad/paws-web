@@ -64,3 +64,18 @@ This will generate compiled source files in the `/dist/staging/` or `/dist/prod/
 The items in your respective `/site/` directory should all be uploaded to the root directory for your target environment. For example, all `/dist/staging/site/` items should be uploaded to the root directory for `staging.pawsforabeer.com`.
 
 The items in your respective `/asset/` directory should all be uploaded to the root directory for the target environment's asset root. For example, all `/dist/prod/asset/` items should be uploaded to the root director for `asset.pawsforabeer.com`.
+
+## Image Creation
+
+Responsive image support:
+
+Breakpoints are at the following size ranges:
+
+ - "xs": 000px -> 480px
+ - "sm": 481px -> 768px
+ - "md": 769px -> 992px
+ - "lg": 993px -> 1200px
+ - "xl": 1201px -> up
+
+When authoring images, don't make an image wider than the maximum size for it's size. For instance, an image intended for mobile should never be larger than 480px wide. Since this is responsive design, the heigh is irrelevant - only widths matter.
+

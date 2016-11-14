@@ -1,6 +1,7 @@
 var $ = require("jquery");
 
 let consts = {
+	breakpoint: BREAKPOINT,
 	configTypes:{
 		app: 'app',
 		global: 'global'

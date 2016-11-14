@@ -13,11 +13,12 @@
 				],
 				"background": {
 					"style": "image",
-					"value": "/structure-white-dog-1.jpg"
+					"value": "/structure-white-dog-1.jpg",
+					"sizes": ["xs", "sm", "md", "lg", "xl"]
 				}
 			},
 			"content": {
-				"title": "A Subdued <span class='accent'>Dog</span> Bar",
+				"title": "A Subdued Dog Bar",
 				"cta": {
 					"text": "Learn More",
 					"href": "/contact"

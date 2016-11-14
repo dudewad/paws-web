@@ -12,7 +12,8 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
  */
 const METADATA = {
 	FONT_RELATIVE_PATH: pkg.url.relative.font,
-	IMAGE_RELATIVE_PATH: pkg.url.relative.image
+	IMAGE_RELATIVE_PATH: pkg.url.relative.image,
+	BREAKPOINT: pkg.breakpoint
 };
 
 /**
@@ -67,6 +68,11 @@ module.exports = {
 		modulesDirectories: ['node_modules'],
 		alias: {}
 	},
+	sassLoaderBaseData:
+		  '$ENV_BREAKPOINT_XS: ' + METADATA.BREAKPOINT.xs + ';'
+		+ '$ENV_BREAKPOINT_SM: ' + METADATA.BREAKPOINT.sm + ';'
+		+ '$ENV_BREAKPOINT_MD: ' + METADATA.BREAKPOINT.md + ';'
+		+ '$ENV_BREAKPOINT_LG: ' + METADATA.BREAKPOINT.lg + ';',
 	tslint: {
 		emitErrors: false,
 		failOnHint: false,
