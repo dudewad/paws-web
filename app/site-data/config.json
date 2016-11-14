@@ -3,6 +3,9 @@
 	"routes": {
 		"default": "home.json",
 		"/": "home.json",
-		"contact": "contact.json"
+		"/about": "about.json",
+		"/contact": "contact.json",
+		"/membership": "membership.json",
+		"/rules": "rules.json"
 	}
 }

@@ -72,7 +72,8 @@ module.exports = {
 		  '$ENV_BREAKPOINT_XS: ' + METADATA.BREAKPOINT.xs + ';'
 		+ '$ENV_BREAKPOINT_SM: ' + METADATA.BREAKPOINT.sm + ';'
 		+ '$ENV_BREAKPOINT_MD: ' + METADATA.BREAKPOINT.md + ';'
-		+ '$ENV_BREAKPOINT_LG: ' + METADATA.BREAKPOINT.lg + ';',
+		+ '$ENV_BREAKPOINT_LG: ' + METADATA.BREAKPOINT.lg + ';'
+		+ '$ENV_BREAKPOINT_XL: ' + METADATA.BREAKPOINT.xl + ';',
 	tslint: {
 		emitErrors: false,
 		failOnHint: false,

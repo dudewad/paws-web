@@ -22,6 +22,8 @@ $colors: (
 	footer-subfooter-border:        darken(map-get($base-colors, brand-secondary), 2%),
 	footer-subfooter-bg:            darken(map-get($base-colors, brand-secondary), 5%),
 	header-color:                   map-get($base-colors, white),
+	membership-table-bg:            map-get($base-colors, brand-secondary),
+	membership-table-color:         map-get($base-colors, white),
 	ribbon-bg:                      map-get($base-colors, white),
 	ribbon-color:                   map-get($base-colors, black)
 );

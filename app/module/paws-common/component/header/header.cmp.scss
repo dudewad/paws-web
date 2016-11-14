@@ -13,8 +13,14 @@ header {
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=0);
 
 	.logo {
+		color: map-get($colors, header-color);
+		text-decoration: none;
 		display: inline-block;
 		cursor: pointer;
+
+		&:visited {
+			color: map-get($colors, header-color);
+		}
 
 		.pawsIcon {
 			font-size: 3em;

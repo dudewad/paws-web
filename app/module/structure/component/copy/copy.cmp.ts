@@ -5,11 +5,11 @@ import {App_Const, Asset_Svc, GlobalEvent_Svc} from '../../../paws-common/';
 import {StructureBase_Cmp} from '../../';
 
 @Component({
-	selector: 'tile-set',
-	template: require('./tile-set.cmp.html'),
-	styles: [require('./tile-set.cmp.scss')]
+	selector: 'copy',
+	template: require('./copy.cmp.html'),
+	styles: [require('./copy.cmp.scss')]
 })
-export class TileSet_Cmp extends StructureBase_Cmp{
+export class Copy_Cmp extends StructureBase_Cmp {
 	constructor(protected sanitizer: DomSanitizer,
 	            @Inject(App_Const) protected constants,
 	            protected assetSvc: Asset_Svc,

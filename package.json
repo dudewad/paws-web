@@ -96,7 +96,8 @@
 		"xs": 480,
 		"sm": 768,
 		"md": 992,
-		"lg": 1200
+		"lg": 1200,
+		"xl": 9999
 	},
 	"author": "Layton Miller",
 	"license": "MIT",

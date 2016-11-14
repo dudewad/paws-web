@@ -11,7 +11,7 @@
 							<h2 [innerHtml]="getSanHtml(tile.title)"></h2>
 							<p [innerHtml]="getSanHtml(tile.body)"></p>
 							<a class="button" *ngIf="tile?.cta?.text && tile?.cta?.href"
-							   [innerHtml]="getSanHtml(tile.cta.text)" [href]="tile.cta.href"></a>
+							   [innerHtml]="getSanHtml(tile.cta.text)" [routerLink]="tile.cta.href"></a>
 						</div>
 					</div>
 				</div>

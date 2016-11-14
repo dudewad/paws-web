@@ -15,17 +15,9 @@
 	}
 
 	.ribbon-content {
-		padding: 2em;
+		padding: 2em 0;
 		color: map-get($colors, ribbon-color);
 		background: map-get($colors, ribbon-bg);
-	}
-
-	@media screen and (max-width: $screen-xs-max) {
-		.container,
-		.row,
-		.ribbon-container {
-			padding: 0;
-		}
 	}
 
 	@media screen and (min-width: $screen-sm-min) {
@@ -35,6 +27,7 @@
 
 		.ribbon-content {
 			display: inline-block;
+			padding: 2em;
 		}
 
 		.structure-content {

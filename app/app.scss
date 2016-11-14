@@ -33,7 +33,7 @@ h1 {
 }
 
 h2 {
-	font-size: 1.25em;
+	font-size: 1.5em;
 }
 
 p,
@@ -41,10 +41,26 @@ li {
 	font-size: 1.2rem;
 }
 
+p {
+	line-height: 1.4;
+}
+
 ul {
 	margin: 0;
 	padding: 0;
 	list-style: none;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.text-right {
+	text-align: right;
 }
 
 .site-content-wrapper {

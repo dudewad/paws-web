@@ -6,7 +6,7 @@
 					<h1 [innerHtml]="getSanHtml(content.title)"></h1>
 					<h2 *ngIf="content.subtitle" [innerHtml]="getSanHtml(content.subtitle)"></h2>
 					<p *ngIf="content.body" [innerHtml]="getSanHtml(content.body)"></p>
-					<a class="button" *ngIf="content?.cta?.text && content?.cta?.href" [innerHtml]="getSanHtml(content.cta.text)" [href]="content.cta.href"></a>
+					<a class="button" *ngIf="content?.cta?.text && content?.cta?.href" [innerHtml]="getSanHtml(content.cta.text)" [routerLink]="content.cta.href"></a>
 				</div>
 			</div>
 		</div>

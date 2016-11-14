@@ -19,6 +19,7 @@ export class StructureBuilder_Cmp implements OnInit, OnDestroy {
 	//Routes called before the routeMap has loaded will be stored here.
 	private currentRoute:any;
 	private configSvcUnsubscriber:any;
+	private body: any = document.getElementsByTagName("body")[0];
 	//View child contains the rendered content for the structure
 	@ViewChild('structure', {read: ViewContainerRef}) structureContainer: ViewContainerRef;
 
@@ -69,8 +70,8 @@ export class StructureBuilder_Cmp implements OnInit, OnDestroy {
 					this.onPageConfigChange(result)
 				},
 				error => {
+					//TODO: Redirect to 404
 					console.warn(`Error retrieving page JSON file for ${url}. The file does not exist.`);
-					//Redirect to 404
 				});
 	}
 
@@ -116,7 +117,9 @@ export class StructureBuilder_Cmp implements OnInit, OnDestroy {
 	 */
 	private onPageConfigChange(config:any){
 		let conf = new PageConfig_Mdl(config);
+		this.renderer.clearPage(this.structureContainer);
 		this.renderer.renderPage(conf, this.structureContainer);
+		this.body.scrollTop = 0;
 	}
 
 	ngOnDestroy() {

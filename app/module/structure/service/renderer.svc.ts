@@ -1,13 +1,15 @@
 import {Inject,	Injectable,	ComponentFactoryResolver, ViewContainerRef} from '@angular/core';
 
 import {App_Const} from '../../paws-common/';
-import {Hero_Cmp, PageConfig_Mdl, StructureBase_Cmp, Ribbon_Cmp, TextImage_Cmp, TileSet_Cmp} from '../';
+import {Copy_Cmp, DataTable_Cmp, Hero_Cmp, PageConfig_Mdl, StructureBase_Cmp, Ribbon_Cmp, TextImage_Cmp, TileSet_Cmp} from '../';
 
 @Injectable()
 export class Renderer_Svc {
 	private compExt:string = '';
 	//Register all components that could be instantiated dynamically here. Match the name to the token exactly.
 	private componentRegistry:any = {
+		'Copy_Cmp': Copy_Cmp,
+		'DataTable_Cmp': DataTable_Cmp,
 		'Hero_Cmp': Hero_Cmp,
 		'Ribbon_Cmp': Ribbon_Cmp,
 		'TextImage_Cmp': TextImage_Cmp,
@@ -17,6 +19,10 @@ export class Renderer_Svc {
 	constructor(private resolver: ComponentFactoryResolver,
 	            @Inject(App_Const) private constants) {
 		this.compExt = constants.routeMap.componentExtension;
+	}
+
+	public clearPage(target: ViewContainerRef) {
+		target.clear();
 	}
 
 	public renderPage(pageConfig:PageConfig_Mdl, parent: ViewContainerRef) {

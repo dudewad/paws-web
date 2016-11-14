@@ -1,5 +1,6 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
+import {RouterModule} from '@angular/router';
 
 import {MainMenu_Mod} from '../main-menu';
 
@@ -16,7 +17,8 @@ import {Config_Svc} from "./service";
 	],
 	imports: [
 		CommonModule,
-		MainMenu_Mod
+		MainMenu_Mod,
+		RouterModule
 	],
 	exports: [
 		Footer_Cmp,

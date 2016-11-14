@@ -8,10 +8,54 @@
 		{
 			"type": "Hero",
 			"config": {
+				"class": [
+					"compensate-header"
+				],
+				"background": {
+					"style": "image",
+					"value": "/structure-bg-dogs-couch-1.jpg",
+					"responsive": true
+				}
 			},
 			"content": {
-				"title": "Contact Page!",
-				"subtitle": "Now you can get in touch with us."
+				"title": "Contact Us"
+			}
+		},
+		{
+			"type": "Copy",
+			"config": {
+				"class": [
+				]
+			},
+			"content": {
+				"title": "Come Say Hi",
+				"body": "501 Harris Avenue,<br>Bellingham, WA 98225<br>360-733-PAWS<br>(360-733-7297)<br><br>We are a stone's throw from downtown Fairhaven, in a building just in front of the Amtrak/Greyhound station near the Alaska Ferry. Our convenient location means you won't have to go far to come give your dog a great place to hang out while you enjoy a delicious, local beverage!"
+			}
+		},
+		{
+			"type": "Copy",
+			"config": {
+				"class": [
+					"no-top-padding"
+				]
+			},
+			"content": {
+				"subtitle": "Hours",
+				"body": "Mon - Fri: 11 AM to 9 PM<br>Sat, Sun: 11 AM to 11 PM"
+			}
+		},
+		{
+			"type": "Ribbon",
+			"config": {
+				"class": [
+					"compensate-footer",
+					"contact-ribbon"
+				]
+			},
+			"content": {
+				"title": "Paws for a Beer",
+				"body": "501 Harris Avenue<br>Bellingham, WA 98225<br>360-733-PAWS",
+				"iframe": "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJG0wMvSKihVQRpndcABnnMLw&key=AIzaSyAw7X6OqbKGKCTznZOaujyJUvfuRmYEAb8&zoom=16"
 			}
 		}
 	]

@@ -13,50 +13,28 @@
 				],
 				"background": {
 					"style": "image",
-					"value": "/structure-white-dog-1.jpg",
-					"sizes": ["xs", "sm", "md", "lg", "xl"]
+					"value": "/structure-bg-white-dog-1.jpg",
+					"responsive": true
 				}
 			},
 			"content": {
 				"title": "A Subdued Dog Bar",
 				"cta": {
 					"text": "Learn More",
-					"href": "/contact"
+					"href": "/about"
 				}
 			}
 		},
 		{
-			"type": "TextImage",
+			"type": "Copy",
 			"config": {
-				"class": [
-					"content-left",
-					"text-centered"
-				]
+				"class": ["text-center"]
 			},
 			"content": {
-				"title": "We're so awesome",
-				"body": "Dogs are like cats in that they are animals. But not all animals can be dogs, such as cats, for instance. They are nothing like dogs, except for the fact that dogs are like THEM, which might sound backwards, but that's because you're stupid. Thanks for playing!",
-				"image": "/structure-bg-bar-paw-2.jpg",
+				"title": "What is Paws?",
+				"body": "Paws For a Beer is Bellingham's first and only dog-friendly tavern. Here, dogs with memberships are able to roam freely off-leash inside and outside the premises while their owners and the general 21+ public sip on refreshing beverages. We are dedicated to improving the dog-based community by offering free training courses to our members, networking with local dog rescue agencies to bring deserving dogs to deserving owners, and serve PNW beers, ciders, kombucha and wine. At Paws For a Beer, whether the dogs are on the couches or cruising around behind the bar, it's all good. Because this is all for them.",
 				"cta": {
-					"text": "Awesome",
-					"href": "/contact"
-				}
-			}
-		},
-		{
-			"type": "TextImage",
-			"config": {
-				"class": [
-					"content-right",
-					"text-centered"
-				]
-			},
-			"content": {
-				"title": "Seriously, we are Awesome",
-				"body": "Back on the dogs vs cats thing. Literally, cats are really bad ass. In theory. The problem is, they're actually huge dickheads. Evolutionarily that doesn't make a lot of sense. It's 2016, we don't live in the jungle, bitches. Stop being dicks to everyone and we'll all like you a little more. Take dogs as an example. Kbye.",
-				"image": "/structure-bg-crosby-1.jpg",
-				"cta": {
-					"text": "Awesome",
+					"text": "Hours and Location",
 					"href": "/contact"
 				}
 			}
@@ -70,44 +48,39 @@
 			},
 			"content": {
 				"title": "Contact Us",
-				"body": "501 Harris Avenue<br>Bellingham, WA 98225<br>360-704-0013",
+				"body": "501 Harris Avenue<br>Bellingham, WA 98225<br>360-733-7297",
 				"iframe": "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJG0wMvSKihVQRpndcABnnMLw&key=AIzaSyAw7X6OqbKGKCTznZOaujyJUvfuRmYEAb8&zoom=16"
 			}
 		},
 		{
 			"type": "TileSet",
-			"config": {
-				"class": [
-					"content-right",
-					"compensate-footer"
-				]
-			},
+			"config": {},
 			"content": {
 				"tiles": [
 					{
-						"title": "Excellence in dogginess",
-						"body": "Why wouldn't you, they asked. Because No.",
-						"image": "/structure-bg-bar-paw-1.jpg",
-						"cta": {
-							"text": "Awesome",
-							"href": "/contact"
-						}
-					},
-					{
-						"title": "Awesomeness in dogginess",
-						"body": "But of course not, I had said. But perhaps.",
+						"title": "Subdued Dog Bar Rules",
+						"body": "Do's and Dont's in the tavern",
 						"image": "/structure-bg-crosby-1.jpg",
 						"cta": {
-							"text": "Sweet",
-							"href": "/contact"
+							"text": "Rules &amp; Guidelines",
+							"href": "/rules"
 						}
 					},
 					{
-						"title": "Dogs are fun, ",
-						"body": "If I could, then sometimes, who knows?",
+						"title": "Dog Membership Details",
+						"body": "All you need to know on how to sign up your furry friend",
 						"image": "/structure-bg-tables-1.jpg",
 						"cta": {
-							"text": "Righto",
+							"text": "Membership",
+							"href": "/membership"
+						}
+					},
+					{
+						"title": "Hours &amp; Info",
+						"body": "Get the skinny on how/when to show up",
+						"image": "/structure-bg-bar-paw-1.jpg",
+						"cta": {
+							"text": "Hours &amp; Info",
 							"href": "/contact"
 						}
 					}
