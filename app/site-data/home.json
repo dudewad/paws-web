@@ -13,13 +13,11 @@
 				],
 				"background": {
 					"style": "image",
-					"value": "/structure-bg-bar-1.jpg"
+					"value": "/structure-white-dog-1.jpg"
 				}
 			},
 			"content": {
 				"title": "A Subdued <span class='accent'>Dog</span> Bar",
-				"subtitle": "Awesome Bellingham beer, dogs, and good times",
-				"body": "We serve delicious beer in cans so that your dog can come into the bar without violating health code by pooping all over the place, particularly in peoples' food.",
 				"cta": {
 					"text": "Learn More",
 					"href": "/contact"
