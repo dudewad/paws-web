@@ -27,7 +27,7 @@ const METADATA = webpackMerge(commonConfig.METADATA, {
 const outputBase = 'dist/prod';
 const paths = {
 	output: {
-		content: helpers.root(path.join(outputBase, 'assets')),
+		content: helpers.root(path.join(outputBase, 'asset')),
 		site: helpers.root(path.join(outputBase, 'site')),
 		siteData: helpers.root(path.join(outputBase, 'site', 'site-data'))
 	}
@@ -65,7 +65,7 @@ module.exports = webpackMerge(commonConfig, {
 	plugins: [
 		new CopyWebpackPlugin([
 			{
-				from: 'app/assets',
+				from: 'app/asset',
 				to: paths.output.content
 			},
 			{

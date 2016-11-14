@@ -51,7 +51,7 @@
   "directories": {
     "app": "app/",
     "scssRoot": "app/style/",
-    "fontRoot": "app/assets/font/",
+    "fontRoot": "app/asset/font/",
     "grunt": {
       "aliasTask": "config/grunt/aliasTask/",
       "taskConfig": "config/grunt/taskConfig/"
@@ -77,15 +77,15 @@
   "url": {
     "dev": {
       "dataRoot": "/app/site-data/",
-      "contentRoot": "/app/assets/"
+      "contentRoot": "/app/asset/"
     },
     "staging": {
       "dataRoot": "/staging/site-data/",
-      "contentRoot": "/staging/assets/"
+      "contentRoot": "/staging/asset/"
     },
     "prod": {
       "dataRoot": "/site-data/",
-      "contentRoot": "//contents.pawsforabeer.com/"
+      "contentRoot": "//asset.pawsforabeer.com/"
     },
     "relative": {
       "font": "/font/",

@@ -47,10 +47,11 @@ This webpack instance is configured to automatically refresh whenever file chang
 ## Generating Staging and Production Code
 Need staging or production code? Easy!
 
+**Note: Always run a staging build and upload it to the server _first_**. This will help eliminate any mistakes, it's the entire point of the staging environment.
+
 In the root directory of the project, run the appropriate of the following two sets of commands in a command prompt/terminal:
 
-
-### Build for staing:
+### Build for staging:
 `grunt build:staging`
 `npm run build:staging`
 
@@ -58,4 +59,8 @@ In the root directory of the project, run the appropriate of the following two s
 `grunt build:prod`
 `npm run build:prod`
 
-This will generate compiled source files in the `/dist/staging` or `/dist/prod/` directory. All of these files should be uploaded to the server as-is. However, the `/content/` directory of the prod build may need to be uploaded to the `contents.pawsforabeer.com` subdomain separately depending on deployment procedure.
+This will generate compiled source files in the `/dist/staging/` or `/dist/prod/` directory, depending on which build you ran. 
+
+The items in your respective `/site/` directory should all be uploaded to the root directory for your target environment. For example, all `/dist/staging/site/` items should be uploaded to the root directory for `staging.pawsforabeer.com`.
+
+The items in your respective `/asset/` directory should all be uploaded to the root directory for the target environment's asset root. For example, all `/dist/prod/asset/` items should be uploaded to the root director for `asset.pawsforabeer.com`.
