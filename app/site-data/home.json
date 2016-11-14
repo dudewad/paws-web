@@ -54,7 +54,11 @@
 		},
 		{
 			"type": "TileSet",
-			"config": {},
+			"config": {
+				"class": [
+					"compensate-footer"
+				]
+			},
 			"content": {
 				"tiles": [
 					{
