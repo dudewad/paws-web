@@ -12,7 +12,8 @@ let consts = {
 		dataRoot: DATA_ROOT,
 		//This file maps the route paths (routes) to data files for configuration of the site
 		config: 'config.json',
-		imageRelativePath: IMAGE_RELATIVE_PATH
+		imageRelativePath: IMAGE_RELATIVE_PATH,
+		googleMapsImport: 'https://maps.googleapis.com/maps/api/js?key=$$API_KEY$$'
 	},
 	routeMap: {
 		//The key for the route map's "default" option
@@ -25,6 +26,14 @@ let consts = {
 		backgroundStyles: {
 			image: 'image',
 			color: 'color'
+		}
+	},
+	vendor: {
+		googleMaps: {
+			apiKey: 'AIzaSyAw7X6OqbKGKCTznZOaujyJUvfuRmYEAb8',
+			placeIds: {
+				store: 'ChIJG0wMvSKihVQRpndcABnnMLw'
+			}
 		}
 	}
 };

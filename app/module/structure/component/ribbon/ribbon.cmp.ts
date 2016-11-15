@@ -1,7 +1,7 @@
-import {Component, Inject} from '@angular/core';
+import {Component, Inject, OnDestroy, ViewChild, ViewContainerRef} from '@angular/core';
 import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
 
-import {App_Const, Asset_Svc, GlobalEvent_Svc} from '../../../paws-common/';
+import {App_Const, Asset_Svc, GlobalEvent_Svc, GoogleMap_Svc} from '../../../paws-common/';
 import {StructureBase_Cmp} from '../../';
 
 @Component({
@@ -9,24 +9,41 @@ import {StructureBase_Cmp} from '../../';
 	template: require('./ribbon.cmp.html'),
 	styles: [require('./ribbon.cmp.scss')]
 })
-export class Ribbon_Cmp extends StructureBase_Cmp {
+export class Ribbon_Cmp extends StructureBase_Cmp implements OnDestroy{
 	private iframeSrc:SafeResourceUrl;
+	private hasMap:boolean = false;
+	private hasIframe:boolean = false;
+	//View child contains the rendered content for the structure
+	@ViewChild('mapEl', {read: ViewContainerRef}) mapEl: ViewContainerRef;
 
 	constructor(protected sanitizer: DomSanitizer,
 	            @Inject(App_Const) protected constants,
 	            protected assetSvc: Asset_Svc,
-	            protected globalEventSvc: GlobalEvent_Svc) {
+	            protected globalEventSvc: GlobalEvent_Svc,
+				private googleMapSvc:GoogleMap_Svc) {
 		super(sanitizer, constants, assetSvc, globalEventSvc);
 	}
 
 	public setConfig(config) {
 		super.setConfig(config);
-		this.setIframeSrc();
+		this.hasMap = !!(this.content && this.content.map);
+		this.hasIframe = !!(this.content && this.content.iframe);
+
+		if (this.hasMap) {
+			window.setTimeout(() => {
+				this.googleMapSvc.initMap(this.mapEl);
+			}, 0);
+		}
+		if (this.hasIframe) {
+			this.setIframeSrc();
+		}
 	}
 
 	private setIframeSrc() {
-		if (this.content && this.content.iframe) {
-			this.iframeSrc = this.sanitizer.bypassSecurityTrustResourceUrl(this.content.iframe);
-		}
+		this.iframeSrc = this.sanitizer.bypassSecurityTrustResourceUrl(this.content.iframe);
+	}
+
+	ngOnDestroy() {
+
 	}
 }

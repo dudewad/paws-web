@@ -8,7 +8,7 @@ import {
 	Footer_Cmp,
 	Header_Cmp
 } from './component';
-import {Config_Svc} from "./service";
+import {Asset_Svc, Config_Svc} from "./service";
 
 @NgModule({
 	declarations: [
@@ -25,6 +25,7 @@ import {Config_Svc} from "./service";
 		Header_Cmp
 	],
 	providers: [
+		Asset_Svc,
 		Config_Svc
 	]
 })

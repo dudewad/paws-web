@@ -11,5 +11,6 @@
 			</div>
 		</div>
 	</div>
-	<iframe *ngIf="iframeSrc" [src]="iframeSrc"></iframe>
+	<iframe *ngIf="hasIframe" [src]="iframeSrc"></iframe>
+	<div class="map" *ngIf="hasMap" #mapEl></div>
 </div>

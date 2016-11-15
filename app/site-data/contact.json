@@ -55,7 +55,7 @@
 			"content": {
 				"title": "Paws for a Beer",
 				"body": "501 Harris Avenue<br>Bellingham, WA 98225<br>360-733-PAWS",
-				"iframe": "https://www.google.com/maps/embed/v1/place?q=place_id:ChIJG0wMvSKihVQRpndcABnnMLw&key=AIzaSyAw7X6OqbKGKCTznZOaujyJUvfuRmYEAb8&zoom=16"
+				"map": true
 			}
 		}
 	]

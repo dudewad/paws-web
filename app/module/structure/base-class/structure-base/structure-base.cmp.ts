@@ -88,11 +88,11 @@ export abstract class StructureBase_Cmp implements OnDestroy {
 					};
 					break;
 				default:
-					console.warn("Unrecognized background type set. Incorrect JSON. Try again.");
-					console.log("Possible options are:");
+					let msg = "Unrecognized background type set. Incorrect JSON. Try again.\nPossible options are:";
 					for (var style in styles) {
-						console.log(` - ${style}`);
+						msg += `\n - ${style}`;
 					}
+					console.warn(msg);
 					break;
 			}
 		}

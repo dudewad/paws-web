@@ -14,7 +14,7 @@ import {
 	TileSet_Cmp
 } from './component';
 import {Renderer_Svc} from './service';
-import {Asset_Svc, GlobalEvent_Svc} from "../paws-common";
+import {Asset_Svc, GlobalEvent_Svc, GoogleMap_Svc} from "../paws-common";
 
 @NgModule({
 	declarations: [
@@ -46,6 +46,7 @@ import {Asset_Svc, GlobalEvent_Svc} from "../paws-common";
 	providers: [
 		Asset_Svc,
 		GlobalEvent_Svc,
+		GoogleMap_Svc,
 		Renderer_Svc
 	]
 })
