@@ -64,7 +64,7 @@
 					{
 						"title": "Dog Bar Rules",
 						"body": "Do's and Dont's in the tavern",
-						"image": "/structure-bg-crosby-1.jpg",
+						"image": "/crosby-1.jpg",
 						"cta": {
 							"text": "Rules &amp; Guidelines",
 							"href": "/rules"
@@ -73,7 +73,7 @@
 					{
 						"title": "Dog Membership",
 						"body": "How to sign up your furry friend",
-						"image": "/structure-bg-tables-1.jpg",
+						"image": "/tables-1.jpg",
 						"cta": {
 							"text": "Membership",
 							"href": "/membership"
@@ -82,7 +82,7 @@
 					{
 						"title": "Hours &amp; Info",
 						"body": "How and when to show up",
-						"image": "/structure-bg-bar-paw-1.jpg",
+						"image": "/dog-jump.jpg",
 						"cta": {
 							"text": "Hours &amp; Info",
 							"href": "/contact"
