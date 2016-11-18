@@ -51,6 +51,35 @@ ul {
 	list-style: none;
 }
 
+li {
+	margin: 0 0 1em 1.5em;
+	position: relative;
+
+	&:before {
+		font-family: "pawsIcon";
+		display: block;
+		content: "\f105";
+		position: absolute;
+		left: -1.5em;
+	}
+}
+
+a {
+	color: map-get($colors, anchor-color);
+
+	&:visited {
+		color: map-get($colors, anchor-visited-color);
+	}
+
+	&:hover {
+		color: map-get($colors, anchor-hover-color);
+	}
+
+	&:active {
+		color: map-get($colors, anchor-active-color);
+	}
+}
+
 .text-center {
 	text-align: center;
 }
@@ -80,17 +109,41 @@ ul {
 	vertical-align: middle;
 }
 
+.centered-list {
+	ul {
+		text-align: left;
+		margin: 2em auto 0 auto;
+	}
+}
+
 @media screen and (min-width: $screen-xs-min) {
 }
 
 @media screen and (min-width: $screen-sm-min) {
+	.centered-list {
+		ul {
+			width: 85%;
+		}
+	}
 }
 
 @media screen and (min-width: $screen-md-min) {
+	.centered-list {
+		ul {
+			width: 75%;
+		}
+	}
 }
 
 @media screen and (min-width: $screen-lg-min) {
-	p {
+	p,
+	li {
 		font-size: 1.4rem;
+	}
+
+	.centered-list {
+		ul {
+			width: 50%;
+		}
 	}
 }

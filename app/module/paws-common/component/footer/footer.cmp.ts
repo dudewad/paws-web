@@ -1,4 +1,5 @@
 import {Component, Inject, OnInit, OnDestroy} from '@angular/core';
+import {DomSanitizer} from '@angular/platform-browser';
 
 import {App_Const, Config_Svc} from "../../";
 
@@ -14,7 +15,12 @@ export class Footer_Cmp implements OnInit, OnDestroy{
 	private content: any = {};
 
 	constructor(private configSvc: Config_Svc,
+	            private sanitizer: DomSanitizer,
 	            @Inject(App_Const) private constants) {
+	}
+
+	public getSanHtml(str) {
+		return this.sanitizer.bypassSecurityTrustHtml(str);
 	}
 
 	private onConfigChange(type, config) {

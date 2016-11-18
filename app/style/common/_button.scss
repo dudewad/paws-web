@@ -14,11 +14,18 @@ button,
 	outline: none;
 	text-decoration: none;
 
+	&:visited {
+		color: map-get($colors, button-color);
+		background: map-get($colors, button-bg);
+	}
+
 	&:hover {
+		color: map-get($colors, button-color);
 		background: map-get($colors, button-hover-bg);
 	}
 
 	&:active {
+		color: map-get($colors, button-color);
 		background: map-get($colors, button-active-bg);
 	}
 

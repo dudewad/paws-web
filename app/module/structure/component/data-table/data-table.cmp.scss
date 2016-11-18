@@ -13,4 +13,8 @@
 		background-color: map-get($colors, membership-table-bg);
 		color: map-get($colors, membership-table-color);
 	}
+
+	.structure-content {
+		padding: 2em 0;
+	}
 }

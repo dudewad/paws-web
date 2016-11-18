@@ -18,10 +18,10 @@
 				}
 			},
 			"content": {
-				"title": "A Subdued Dog Bar",
+				"title": "The Subdued Dog Bar",
 				"cta": {
-					"text": "Learn More",
-					"href": "/about"
+					"text": "Join Us",
+					"href": "/membership"
 				}
 			}
 		},
@@ -47,7 +47,7 @@
 				]
 			},
 			"content": {
-				"title": "Contact Us",
+				"title": "Come Visit",
 				"body": "501 Harris Avenue<br>Bellingham, WA 98225<br>360-733-7297",
 				"map": true
 			}
@@ -62,7 +62,7 @@
 			"content": {
 				"tiles": [
 					{
-						"title": "Subdued Dog Bar Rules",
+						"title": "Dog Bar Rules",
 						"body": "Do's and Dont's in the tavern",
 						"image": "/structure-bg-crosby-1.jpg",
 						"cta": {
@@ -71,8 +71,8 @@
 						}
 					},
 					{
-						"title": "Dog Membership Details",
-						"body": "All you need to know on how to sign up your furry friend",
+						"title": "Dog Membership",
+						"body": "How to sign up your furry friend",
 						"image": "/structure-bg-tables-1.jpg",
 						"cta": {
 							"text": "Membership",
@@ -81,7 +81,7 @@
 					},
 					{
 						"title": "Hours &amp; Info",
-						"body": "Get the skinny on how/when to show up",
+						"body": "How and when to show up",
 						"image": "/structure-bg-bar-paw-1.jpg",
 						"cta": {
 							"text": "Hours &amp; Info",
