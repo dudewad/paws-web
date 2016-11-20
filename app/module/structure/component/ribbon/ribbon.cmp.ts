@@ -1,7 +1,7 @@
 import {Component, Inject, OnDestroy, ViewChild, ViewContainerRef} from '@angular/core';
 import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
 
-import {App_Const, Asset_Svc, GlobalEvent_Svc, GoogleMap_Svc} from '../../../paws-common/';
+import {App_Const, Asset_Svc, GlobalEvent_Svc, GoogleMapsConfig_Mdl, GoogleMap_Svc} from '../../../paws-common/';
 import {StructureBase_Cmp} from '../../';
 
 @Component({
@@ -31,7 +31,7 @@ export class Ribbon_Cmp extends StructureBase_Cmp implements OnDestroy{
 
 		if (this.hasMap) {
 			window.setTimeout(() => {
-				this.googleMapSvc.initMap(this.mapEl);
+				this.googleMapSvc.initMap(new GoogleMapsConfig_Mdl(this.mapEl, this.content.map));
 			}, 0);
 		}
 		if (this.hasIframe) {

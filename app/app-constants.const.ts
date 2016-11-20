@@ -30,9 +30,10 @@ let consts = {
 	},
 	vendor: {
 		googleMaps: {
-			apiKey: 'AIzaSyAw7X6OqbKGKCTznZOaujyJUvfuRmYEAb8',
-			placeIds: {
-				store: 'ChIJG0wMvSKihVQRpndcABnnMLw'
+			//Indicates which view type a map is - e.g. map or streetview. Any implemented types should be registered here
+			viewType: {
+				map: 'map',
+				streetview: 'streetview'
 			}
 		}
 	}

@@ -7,5 +7,10 @@
 		"/contact": "contact.json",
 		"/membership": "membership.json",
 		"/rules": "rules.json"
+	},
+	"vendor": {
+		"googleMaps":{
+			"apiKey": "AIzaSyAw7X6OqbKGKCTznZOaujyJUvfuRmYEAb8"
+		}
 	}
 }
