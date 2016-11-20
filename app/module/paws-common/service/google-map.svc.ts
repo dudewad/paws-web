@@ -218,11 +218,9 @@ export class GoogleMap_Svc{
 		if(viewTypes.hasOwnProperty(type)){
 			switch(type) {
 				case viewTypes.map:
-					console.log('loading map');
 					this.loadMap(mapObj);
 					break;
 				case viewTypes.streetview:
-					console.log('loading streetview');
 					this.loadStreetview(mapObj);
 					break;
 			}
