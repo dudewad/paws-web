@@ -49,7 +49,11 @@
 			"content": {
 				"title": "Come Visit",
 				"body": "501 Harris Avenue<br>Bellingham, WA 98225<br>360-733-7297",
-				"map": true
+				"map": {
+					"type": "map",
+					"placeId": "ChIJG0wMvSKihVQRpndcABnnMLw",
+					"marker": "/paws-marker.svg"
+				}
 			}
 		},
 		{

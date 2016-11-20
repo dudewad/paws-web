@@ -2,6 +2,7 @@ import {Inject, Injectable} from '@angular/core';
 import {App_Const, GoogleMapsConfig_Mdl} from '../';
 import {Config_Svc} from './config.svc';
 import {Asset_Svc} from './asset.svc';
+import {Router, NavigationStart} from '@angular/router';
 
 @Injectable()
 export class GoogleMap_Svc{
@@ -173,8 +174,14 @@ export class GoogleMap_Svc{
 
 	constructor(private assetSvc:Asset_Svc,
 	            private configSvc: Config_Svc,
+	            private router:Router,
 	            @Inject(App_Const) private constants) {
 		this.apiKey = configSvc.getConfig(this.constants.configTypes.app).vendor.googleMaps.apiKey;
+		this.router.events
+			.filter(evt => evt instanceof NavigationStart)
+			.subscribe(evt => {
+				this.mapConfigs = [];
+			});
 	}
 
 	initMap(mapObj:GoogleMapsConfig_Mdl) {
@@ -189,8 +196,8 @@ export class GoogleMap_Svc{
 			s.onload = this.onMapsLoad.bind(this);
 			document.getElementsByTagName('body')[0].appendChild(s);
 		}
-		else if(!this.mapsApiLoading) {
-			this.loadMap(mapObj);
+		else if(this.mapsApiLoaded) {
+			this.loadObject(mapObj);
 		}
 	}
 
@@ -211,9 +218,11 @@ export class GoogleMap_Svc{
 		if(viewTypes.hasOwnProperty(type)){
 			switch(type) {
 				case viewTypes.map:
+					console.log('loading map');
 					this.loadMap(mapObj);
 					break;
 				case viewTypes.streetview:
+					console.log('loading streetview');
 					this.loadStreetview(mapObj);
 					break;
 			}
@@ -251,7 +260,7 @@ export class GoogleMap_Svc{
 			}).bind(this),
 			function(results, status){
 				this.geocodeFailed(placeId, results, status);
-			}
+			}.bind(this)
 		);
 	}
 
