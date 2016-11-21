@@ -2,6 +2,7 @@ import {Inject, Injectable} from '@angular/core';
 import {App_Const, GoogleMapsConfig_Mdl} from '../';
 import {Config_Svc} from './config.svc';
 import {Asset_Svc} from './asset.svc';
+import {GlobalEvent_Svc} from './global-event.svc';
 import {Router, NavigationStart} from '@angular/router';
 
 @Injectable()
@@ -175,15 +176,27 @@ export class GoogleMap_Svc{
 	constructor(private assetSvc:Asset_Svc,
 	            private configSvc: Config_Svc,
 	            private router:Router,
+	            private globalEventSvc:GlobalEvent_Svc,
 	            @Inject(App_Const) private constants) {
 		this.apiKey = configSvc.getConfig(this.constants.configTypes.app).vendor.googleMaps.apiKey;
 		this.router.events
 			.filter(evt => evt instanceof NavigationStart)
 			.subscribe(evt => {
+				for (var i = 0; i < this.mapConfigs.length; i++) {
+					var id = this.mapConfigs[i].getResizeHandlerId();
+					if(id !== null) {
+						this.globalEventSvc.unregisterResizeHandler(id);
+					}
+				}
 				this.mapConfigs = [];
 			});
 	}
 
+	/**
+	 * This will handle loading the Google Maps API if necessary. If it's already loaded, we're good to go.
+	 *
+	 * @param mapObj
+	 */
 	initMap(mapObj:GoogleMapsConfig_Mdl) {
 		this.mapConfigs.push(mapObj);
 
@@ -201,6 +214,10 @@ export class GoogleMap_Svc{
 		}
 	}
 
+	/**
+	 * Fires when the google maps API load completes. This will only happen once per session (it won't be re-loaded on a
+	 * per-page basis).
+	 */
 	private onMapsLoad() {
 		this.mapsApiLoaded = true;
 		this.mapsApiLoading = false;
@@ -211,6 +228,11 @@ export class GoogleMap_Svc{
 		}
 	}
 
+	/**
+	 * This is where the branching occurs to load different types of map objects - maps, streetviews, etc.
+	 *
+	 * @param mapObj
+	 */
 	private loadObject(mapObj:GoogleMapsConfig_Mdl) {
 		let type = mapObj.getConfig().type;
 		let viewTypes = this.constants.vendor.googleMaps.viewType;
@@ -227,6 +249,10 @@ export class GoogleMap_Svc{
 		}
 	}
 
+	/**
+	 * Loads your standard Google Map
+	 * @param mapObj
+	 */
 	private loadMap(mapObj:GoogleMapsConfig_Mdl){
 		let config: any = mapObj.getConfig();
 		let el: any = mapObj.getNativeElement();
@@ -247,6 +273,13 @@ export class GoogleMap_Svc{
 						})
 					);
 
+					console.log('REGISTER MAP RESIZE HANDLER!');
+					mapObj.setResizeHandlerId(
+						this.globalEventSvc.registerResizeHandler(function() {
+							mapObj.getMap().setCenter(location);
+						})
+					);
+
 					if (config.marker) {
 						this.setMapMarker(mapObj.getMap(), location, config.marker);
 					}
@@ -262,6 +295,10 @@ export class GoogleMap_Svc{
 		);
 	}
 
+	/**
+	 * Loads a street view object
+	 * @param mapObj
+	 */
 	private loadStreetview(mapObj:GoogleMapsConfig_Mdl){
 		let config: any = mapObj.getConfig();
 		let el: any = mapObj.getNativeElement();
@@ -295,6 +332,12 @@ export class GoogleMap_Svc{
 		);
 	}
 
+	/**
+	 * Requires a place ID to perform a reverse Geocode - essentially will end up returning a lat/long object.
+	 * @param placeId
+	 * @param successHandler
+	 * @param errorHandler
+	 */
 	doReverseGeocode(placeId, successHandler, errorHandler) {
 		this.geoCoder.geocode({'placeId': placeId}, (function (results:any, status: any) {
 			if (status === 'OK') {
@@ -306,11 +349,23 @@ export class GoogleMap_Svc{
 		}));
 	}
 
+	/**
+	 * If geocode fails to work somehow, this will cover that case.
+	 * @param placeId
+	 * @param results
+	 * @param status
+	 */
 	private geocodeFailed(placeId, results, status) {
 		//TODO make this display a UI error!
 		console.error(`Map failed to load- geocode on place id ${placeId} failed.`);
 	}
 
+	/**
+	 * Sets a marker on a map!
+	 * @param map
+	 * @param location
+	 * @param marker
+	 */
 	private setMapMarker(map, location, marker) {
 		new google.maps.Marker({
 			position: location,

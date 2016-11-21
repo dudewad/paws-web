@@ -102,9 +102,11 @@ export class GlobalEvent_Svc {
 	 *                                  registerResizeHandler() method.
 	 */
 	unregisterResizeHandler(id) {
+		console.log('REMOVING RESIZE HANDLER', id);
 		for (let i = 0; i < this.resizeHandlers.length; i++) {
 			let h = this.resizeHandlers[i];
 			if (h.id === id) {
+				console.log('found handler to remove!', id);
 				this.resizeHandlers.splice(i, 1);
 				break;
 			}
@@ -112,8 +114,10 @@ export class GlobalEvent_Svc {
 
 		//When unregistering the last handler, remove the window.onresize handler
 		if (!this.resizeHandlers.length) {
+			console.log('REMOVING WINDOW RESIZE LISTENER ALTOGETHER');
 			this.window.removeEventListener('resize', this.resizeHandler);
 		}
+		console.log('#### Resize handlers list: ', this.resizeHandlers);
 	};
 
 	/**

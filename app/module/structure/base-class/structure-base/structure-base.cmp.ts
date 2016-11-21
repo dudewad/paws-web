@@ -78,7 +78,7 @@ export abstract class StructureBase_Cmp implements OnDestroy {
 						'background-position': bg['position'] || 'center'
 					};
 					if(bg.responsive) {
-						this.globalEventSvc.registerResizeHandler(this.updateResponsiveBackground.bind(this));
+						this.resizeHandlerId = this.globalEventSvc.registerResizeHandler(this.updateResponsiveBackground.bind(this));
 						this.updateResponsiveBackground();
 					}
 					break;

@@ -66,11 +66,16 @@ module.exports = webpackMerge(commonConfig, {
 		new CopyWebpackPlugin([
 			{
 				from: 'app/asset',
-				to: paths.output.content
+				to: paths.output.content,
+				ignore: ['**/src/*']
 			},
 			{
 				from: 'app/site-data',
 				to: paths.output.siteData
+			},
+			{
+				from: '.htaccess',
+				to: paths.output.site
 			}
 		]),
 
