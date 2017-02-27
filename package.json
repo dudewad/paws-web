@@ -81,8 +81,8 @@
       "contentRoot": "/app/asset/"
     },
     "staging": {
-      "dataRoot": "/staging/site-data/",
-      "contentRoot": "/staging/asset/"
+      "dataRoot": "/site-data/",
+      "contentRoot": "/asset/"
     },
     "prod": {
       "dataRoot": "/site-data/",

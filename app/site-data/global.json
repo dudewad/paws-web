@@ -39,12 +39,25 @@
 						]
 					},
 					{
+						"title": "Groups We Support",
+						"items":  [
+							{
+								"href": "http://whatcomhumane.org/",
+								"copy": "Whatcom Humane Society"
+							},
+							{
+								"href": "http://www.happytailshappyhomes.org/",
+								"copy": "Happy Tails Happy Homes"
+							},
+							{
+								"href": "http://www.alternativehumanesociety.com/",
+								"copy": "Alternative Humane Society"
+							}
+						]
+					},
+					{
 						"title": "Things We Like",
 						"items": [
-							{
-								"href": "http://www.humanesociety.org/",
-								"copy": "Humane Society"
-							},
 							{
 								"href": "http://rylanschoen.com/",
 								"copy": "Rylan Schoen Photography"
@@ -61,7 +74,7 @@
 						},
 						{
 							"type": "instagram",
-							"href": "https://www.instagram.com/paws_forabeer/"
+							"href": "https://www.instagram.com/pawsforabeer/"
 						}
 					]
 				}
