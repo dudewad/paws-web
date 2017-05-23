@@ -6,7 +6,8 @@
 		"/about": "about.json",
 		"/contact": "contact.json",
 		"/membership": "membership.json",
-		"/rules": "rules.json"
+		"/rules": "rules.json",
+		"/ski-to-sea": "ski-to-sea.json"
 	},
 	"vendor": {
 		"googleMaps":{

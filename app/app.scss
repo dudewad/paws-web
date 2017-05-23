@@ -81,15 +81,28 @@ a {
 }
 
 .text-center {
-	text-align: center;
+	text-align: center !important;
 }
 
 .text-left {
-	text-align: left;
+	text-align: left !important;
 }
 
 .text-right {
-	text-align: right;
+	text-align: right !important;
+}
+
+.text-bg {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		background: rgba(0,0,0,.35);
+		padding: .15em;
+	}
 }
 
 .site-content-wrapper {

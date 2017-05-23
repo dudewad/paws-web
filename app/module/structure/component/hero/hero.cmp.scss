@@ -11,6 +11,36 @@
 		}
 	}
 
+	&.text-left {
+		h1 {
+			float: left;
+		}
+
+		p {
+			float: left;
+		}
+
+		.button {
+			float: left;
+			clear: both;
+		}
+	}
+
+	&.text-right {
+		h1 {
+			float: right;
+		}
+
+		p {
+			float: right;
+		}
+
+		.button {
+			float: right;
+			clear: both;
+		}
+	}
+
 	.structure-content {
 		padding: 4em 0;
 	}

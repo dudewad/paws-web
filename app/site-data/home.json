@@ -9,19 +9,40 @@
 			"type": "Hero",
 			"config": {
 				"class": [
-					"compensate-header"
+					"compensate-header",
+					"text-right",
+					"text-bg"
 				],
 				"background": {
 					"style": "image",
-					"value": "/structure-bg-white-dog-1.jpg",
+					"value": "/structure-bg-ski-to-sea.jpg",
 					"responsive": true
 				}
 			},
 			"content": {
-				"title": "The Subdued Dog Bar",
+				"title": "Ski to Sea 2017",
+				"body": "Paws for a Beer's Ski to Sea 2017 celebration (held on Sunday, May 28th) features live music by Johnathan Kimball, Goat Mountain's Kid Sister food truck, our excellent selection of NW brews, dogs abound, and you! Head to Paws for a Beer on Sunday, May 28th for a refreshing beverage on the day of Bellingham's iconic Ski to Sea relay race. No new dogs will be allowed (click the button below for more).",
 				"cta": {
-					"text": "Join Us",
-					"href": "/membership"
+					"text": "Learn More",
+					"href": "/ski-to-sea"
+				}
+			}
+		},
+		{
+			"type": "TextImage",
+			"config": {
+				"class": [
+					"content-right",
+					"theme-brand-secondary"
+				]
+			},
+			"content": {
+				"title": "Live Music: Johnathan Kimball",
+				"body": "Come on down to our Ski to Sea 2017 celebration extravaganza for good weather, delicious brews, and live music performed by Johnathan Kimball.",
+				"image": "/band.jpg",
+				"cta": {
+					"text": "Check it out",
+					"href": "/ski-to-sea"
 				}
 			}
 		},

@@ -1,0 +1,66 @@
+{
+	"config": {
+		"header": true,
+		"footer": true,
+		"mainMenu": true
+	},
+	"component": [
+		{
+			"type": "Hero",
+			"config": {
+				"class": [
+					"compensate-header",
+					"text-bg"
+				],
+				"background": {
+					"style": "image",
+					"value": "/structure-bg-ski-to-sea.jpg",
+					"responsive": true
+				}
+			},
+			"content": {
+				"title": "Ski to Sea 2017"
+			}
+		},
+		{
+			"type": "Copy",
+			"config": {
+				"class": [
+					"text-left",
+					"theme-brand-secondary"
+				]
+			},
+			"content": {
+				"subtitle": "About the Event",
+				"body": "As always, all humans are always welcome - as stated on our membership page, you do not need a dog to come into the bar!<br><br>Please note, however, that at this event we expect extremely high volume. Unfortunately, for this reason we will have limited capacity, and can only invite dogs into the bar that have been with us before. Don't worry, this includes all dogs that have been in regardless of pass type (day, month, or year passholders apply). If you have a dog we haven't had the pleasure of meeting before, we will unfortunately have to ask you to return another day so we can meet your furry friend. If you want to come down before Sunday, your dog will indeed be allowed in on the day of the event, so make sure to come say hi if you haven't made it down yet!"
+			}
+		},
+		{
+			"type": "TextImage",
+			"config": {
+				"class": [
+					"content-right"
+				]
+			},
+			"content": {
+				"title": "Live Music: Johnathan Kimball",
+				"body": "Live music is lined up with artist Johnathan Kimball. His is a folk/americana/lumber rock style that will keep you dancing!",
+				"image": "/band.jpg"
+			}
+		},
+		{
+			"type": "TextImage",
+			"config": {
+				"class": [
+					"content-right",
+					"compensate-footer"
+				]
+			},
+			"content": {
+				"title": "Food Truck: Goat Mountain Kid Sister",
+				"body": "Goat Mountain's Kid Sister food truck will be on-site should you need something tasty and filling to go along with your delicious, cold NW beverages. They provide scratch made tacos, burritos and other items for your enjoyment!",
+				"image": "/kid-sister.jpg"
+			}
+		}
+	]
+}

@@ -81,8 +81,8 @@
       "contentRoot": "/app/asset/"
     },
     "staging": {
-      "dataRoot": "/site-data/",
-      "contentRoot": "/asset/"
+      "dataRoot": "/other/paws-web/staging/",
+      "contentRoot": "/other/paws-web/staging/assets/"
     },
     "prod": {
       "dataRoot": "/site-data/",
