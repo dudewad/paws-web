@@ -1,0 +1,11 @@
+li {
+    //Need to re-instate the paw bullet point once codepoints become a thing in webpack-webfont
+    /*&:before {
+        font-family: "siteIcon";
+        display: block;
+        content: "\f101";
+        position: absolute;
+        left: -1.5em;
+    }*/
+    list-style: initial;
+}
