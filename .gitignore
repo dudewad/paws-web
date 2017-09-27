@@ -1,8 +1,4 @@
-/paws-web.iml
-/.idea/
-/node_modules/
-
-# Don't remove these rules!
-# They're for generated files. These items shouldn't exist when you pull the repo, but might later when scripts run.
-/prod/
-npm-debug.log
+*.iml
+.idea/
+node_modules/
+dist/

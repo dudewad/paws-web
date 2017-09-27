@@ -1,0 +1,17 @@
+{
+    "globalConfig": "global.json",
+    "routes": {
+        "default": "home.json",
+        "/": "home.json",
+        "/about": "about.json",
+        "/contact": "contact.json",
+        "/membership": "membership.json",
+        "/rules": "rules.json",
+        "/ski-to-sea": "ski-to-sea.json"
+    },
+    "vendor": {
+        "googleMaps": {
+            "apiKey": "AIzaSyAw7X6OqbKGKCTznZOaujyJUvfuRmYEAb8"
+        }
+    }
+}

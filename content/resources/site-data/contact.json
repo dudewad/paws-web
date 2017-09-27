@@ -1,0 +1,90 @@
+{
+    "config": {
+        "header": true,
+        "footer": true,
+        "mainMenu": false
+    },
+    "component": [
+        {
+            "type": "Hero",
+            "config": {
+                "class": [
+                    "compensate-header"
+                ],
+                "background": {
+                    "style": "image",
+                    "value": "/structure-bg-dogs-couch-1.jpg",
+                    "responsive": true
+                }
+            },
+            "content": {
+                "title": "Contact Us"
+            }
+        },
+        {
+            "type": "Copy",
+            "config": {
+                "class": [
+                    "theme-brand-secondary"
+                ]
+            },
+            "content": {
+                "title": "Come Say Hi!",
+                "body": "501 Harris Avenue,<br>Bellingham, WA 98225<br>360-733-PAWS<br>(360-733-7297)<br><br>We are located in lower Fairhaven, WA, in a building just in front of the Amtrak/Greyhound station near the Alaska Ferry. This also happens to be situated at the last stop for the WTA 401 bus line. Our convenient location means you won't have to go far to come give your dog a great place to hang out while you enjoy a delicious, local beverage!"
+            }
+        },
+        {
+            "type": "DataTable",
+            "config": {
+                "class": [
+                ]
+            },
+            "content": {
+                "title": "Hours of Operation",
+                "rows": [
+                    [
+                        "Mon - Fri",
+                        "3:00 pm - 9:00 pm"
+                    ],
+                    [
+                        "Sat - Sun",
+                        "12:00 pm - 9:00 pm"
+                    ]
+                ]
+            }
+        },
+        {
+            "type": "Ribbon",
+            "config": {
+                "class": [
+                    "contact-ribbon"
+                ]
+            },
+            "content": {
+                "title": "Paws for a Beer",
+                "body": "501 Harris Avenue<br>Bellingham, WA 98225<br>360-733-PAWS",
+                "map": {
+                    "type": "map",
+                    "placeId": "ChIJG0wMvSKihVQRpndcABnnMLw",
+                    "marker": "/paws-marker.svg"
+                }
+            }
+        },
+        {
+            "type": "Ribbon",
+            "config": {
+                "class": [
+                    "no-top-padding",
+                    "compensate-footer"
+                ]
+            },
+            "content": {
+                "title": "Tour the shop!",
+                "map": {
+                    "type": "streetview",
+                    "placeId": "ChIJG0wMvSKihVQRpndcABnnMLw"
+                }
+            }
+        }
+    ]
+}

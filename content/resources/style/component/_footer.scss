@@ -1,0 +1,20 @@
+$imageRoot: $urlContentRoot + $urlImageRelativePath;
+
+footer {
+    &:before {
+        content: " ";
+        display: block;
+        height: 66px;
+        background: url('#{$imageRoot}footer-grass.png') repeat-x top center;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .social {
+        i {
+            text-decoration: none;
+        }
+    }
+}
