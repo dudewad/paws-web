@@ -1,0 +1,48 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./",
+        "target": "es5",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "removeComments": false,
+        "noImplicitAny": false,
+        "paths": {
+            "@angular/*": [
+                "lm-generator-base/node_modules/@angular/*"
+            ],
+            "lm/extensions": [
+                "content/resources/app"
+            ],
+            "lm/*": [
+                "lm-generator-base/app/module/*"
+            ],
+            "require": [
+                "lm-generator-base/require"
+            ]
+        },
+        "lib": [
+            "es5",
+            "es2015",
+            "es2017",
+            "dom",
+            "scripthost"
+        ]
+    },
+    "include": [
+        "./lm-generator-base/app/**/*.ts",
+        "./lm-generator-base/app/custom-typings.d.ts",
+        "./content/resources/app/**/*.ts"
+    ],
+    "awesomeTypescriptLoaderOptions": {
+        "resolveGlobs": true,
+        "forkChecker": true
+    },
+    "compileOnSave": false,
+    "buildOnSave": false,
+    "atom": {
+        "rewriteTsconfig": false
+    }
+}
