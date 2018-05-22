@@ -4,11 +4,10 @@
   "description": "Paws for a Beer website",
   "main": "index.js",
   "dependencies": {
+    "@types/node": "^8.0.40"
   },
-  "devDependencies": {
-  },
-  "scripts": {
-  },
+  "devDependencies": {},
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/dudewad/paws-web.git"
