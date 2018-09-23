@@ -9,22 +9,19 @@
       "type": "Hero",
       "config": {
         "class": [
-          "compensate-header",
-          "text-bg"
+          "compensate-header"
         ],
         "background": {
           "style": "image",
-          "value": "/structure-bg-ski-to-sea.jpg",
+          "value": "/structure-bg-white-dog-1.jpg",
           "responsive": true
         }
       },
       "content": {
-        "title": "Ski to Sea 2018",
-        "subtitle": "Food and fun in the sun",
-        "body": "Come down for Paws for a Beer's Ski to Sea 2018 extravaganza to find great local NW brews, food, and music at the only spot in the Northwest designed specifically for you and your dog.",
+        "title": "The Subdued Dog Bar",
         "cta": {
-          "text": "Learn More",
-          "href": "ski-to-sea"
+          "text": "Join Us",
+          "href": "/membership"
         }
       }
     },
