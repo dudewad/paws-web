@@ -64,11 +64,11 @@
         },
         "staging": {
             "dataRoot": "//staging.pawsforabeer.com/site-data/",
-            "contentRoot": "//s-asset.pawsforabeer.com/"
+            "contentRoot": "//pawsforabeer.com/asset"
         },
         "prod": {
             "dataRoot": "//www.pawsforabeer.com/site-data/",
-            "contentRoot": "//asset.pawsforabeer.com/"
+            "contentRoot": "//www.pawsforabeer.com/asset"
         },
         "relative": {
             "font": "/font/",
