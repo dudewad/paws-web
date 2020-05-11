@@ -1,0 +1,35 @@
+{
+  "config": {
+    "header": true,
+    "footer": true,
+    "mainMenu": false
+  },
+  "component": [
+    {
+      "type": "Hero",
+      "config": {
+        "class": [ "compensate-header" ],
+        "background": {
+          "style": "image",
+          "value": "/structure-bg-dog-tube.jpg",
+          "responsive": true
+        }
+      },
+      "content": {
+        "title": "Dog Daycare At Paws",
+        "body": "Daycare offered Monday-Friday 9am-3pm. Hourly slots available every half hour. "
+      }
+    },
+    {
+      "type": "Copy",
+      "config": {
+        "class": ["daycare-frame"]
+      },
+      "content": {
+        "title": "Need a dog daycare?",
+        "subtitle": "We've got your back.",
+        "body": "<p>Select your preferred daycare options below. We're excited to see you and your dog soon!</p><div class='frame-wrapper'><iframe class='scheduler-frame' src='https://app.acuityscheduling.com/schedule.php?owner=18939947' frameborder='0' allowfullscreen></iframe></div>"
+      }
+    }
+  ]
+}

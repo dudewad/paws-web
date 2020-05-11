@@ -1,0 +1,31 @@
+{
+    "config": {
+        "header": true,
+        "footer": true,
+        "mainMenu": false
+    },
+    "component": [
+        {
+            "type": "Hero",
+            "config": {
+                "class": [
+                    "compensate-header",
+                    "text-bg"
+                ],
+                "background": {
+                    "style": "image",
+                    "value": "/structure-bg-red-heeler.jpg",
+                    "responsive": true
+                }
+            },
+            "content": {
+                "title": "Paws Store"
+            }
+        },
+        {
+            "type": "EcwidStore",
+            "config": {},
+            "content": {}
+        }
+    ]
+}

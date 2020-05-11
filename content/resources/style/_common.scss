@@ -1,11 +1,26 @@
 li {
-    //Need to re-instate the paw bullet point once codepoints become a thing in webpack-webfont
-    /*&:before {
-        font-family: "siteIcon";
-        display: block;
-        content: "\f101";
-        position: absolute;
-        left: -1.5em;
-    }*/
     list-style: initial;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-transform: uppercase;
+    letter-spacing: normal;
+}
+
+iframe {
+    width: 100%;
+}
+
+.frame-wrapper {
+    position: relative;
+
+    &::after {
+        content: '';
+        display: block;
+        background: #FFF;
+        height: 150px;
+        width: 100%;
+        position: absolute;
+        transform: translateY(-150px);
+    }
 }

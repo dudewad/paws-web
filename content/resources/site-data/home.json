@@ -18,10 +18,30 @@
         }
       },
       "content": {
-        "title": "The Subdued Dog Bar",
+        "title": "Dog Daycare at Paws",
+        "subtitle": "Hourly and daily dog care",
         "cta": {
-          "text": "Join Us",
-          "href": "/membership"
+          "text": "Learn More",
+          "href": "/daycare"
+        }
+      }
+    },
+    {
+      "type": "Copy",
+      "config": {
+        "class": ["text-center", "theme-brand-secondary"],
+        "background": {
+          "style": "image",
+          "value": "/structure-bg-store.jpg",
+          "responsive": true
+        }
+      },
+      "content": {
+        "title": "Paws Store",
+        "subtitle": "Shop for beer and cider here!",
+        "cta": {
+          "text": "Shop Now",
+          "href": "/store"
         }
       }
     },

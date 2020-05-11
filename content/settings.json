@@ -32,7 +32,7 @@
             "style": "normal"
         },
         {
-            "name": "bebas",
+            "name": "serifa",
             "type": "webfont",
             "formats": [
                 {
@@ -48,9 +48,20 @@
             "style": "normal"
         },
         {
-            "name": "alice",
-            "type": "import",
-            "url": "https://fonts.googleapis.com/css?family=Alice"
+            "name": "tofino",
+            "type": "webfont",
+            "formats": [
+                {
+                    "name": "truetype",
+                    "extension": "ttf"
+                },
+                {
+                    "name": "woff",
+                    "extension": "woff"
+                }
+            ],
+            "weight": "normal",
+            "style": "normal"
         }
     ],
     "style": {

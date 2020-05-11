@@ -5,13 +5,18 @@
         "/": "home.json",
         "/about": "about.json",
         "/contact": "contact.json",
+        "/daycare": "daycare.json",
         "/membership": "membership.json",
         "/rules": "rules.json",
-        "/ski-to-sea": "ski-to-sea.json"
+        "/ski-to-sea": "ski-to-sea.json",
+        "/store": "store.json"
     },
     "vendor": {
         "googleMaps": {
             "apiKey": "AIzaSyAw7X6OqbKGKCTznZOaujyJUvfuRmYEAb8"
+        },
+        "ecwid": {
+            "storeId": 29141928
         },
         "metrics": {
             "google": {

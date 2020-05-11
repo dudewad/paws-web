@@ -27,17 +27,12 @@
                         ]
                     },
                     {
-                        "title": "Events",
-                        "items": [
-                            {
-                                "routerLink": "/ski-to-sea",
-                                "copy": "Ski to Sea 2018"
-                            }
-                        ]
-                    },
-                    {
                         "title": "Resources",
                         "items": [
+                            {
+                                "routerLink": "/store",
+                                "copy": "Paws Store"
+                            },
                             {
                                 "routerLink": "/membership",
                                 "copy": "Membership"
