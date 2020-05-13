@@ -11,7 +11,7 @@
         "class": [ "compensate-header" ],
         "background": {
           "style": "image",
-          "value": "/structure-bg-dog-tube.jpg",
+          "value": "/structure-bg-dog-pack.jpg",
           "responsive": true
         }
       },
@@ -28,7 +28,7 @@
       "content": {
         "title": "Need a dog daycare?",
         "subtitle": "We've got your back.",
-        "body": "<p>Select your preferred daycare options below. We're excited to see you and your dog soon!</p><div class='frame-wrapper'><iframe class='scheduler-frame' src='https://app.acuityscheduling.com/schedule.php?owner=18939947' frameborder='0' allowfullscreen></iframe></div>"
+        "body": "<p>Select your preferred daycare options below. We're excited to see you and your dog soon!</p><div class='frame-wrapper'><iframe class='scheduler-frame' src='https://app.acuityscheduling.com/schedule.php?owner=18939947' title='Schedule Appointment' frameborder='0' allowfullscreen></iframe><script src=\"https://embed.acuityscheduling.com/js/embed.js\" type=\"text/javascript\"></script></div>"
       }
     }
   ]

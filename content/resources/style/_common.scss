@@ -13,14 +13,4 @@ iframe {
 
 .frame-wrapper {
     position: relative;
-
-    &::after {
-        content: '';
-        display: block;
-        background: #FFF;
-        height: 150px;
-        width: 100%;
-        position: absolute;
-        transform: translateY(-150px);
-    }
 }
