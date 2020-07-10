@@ -1,31 +1,93 @@
 @import '../../../../style/bootstrap-custom/bootstrap-no-output';
 
-.daycare-frame {
-  iframe {
-    height: 1335px;
+.structure {
+  content-toggle {
+    .toggle-item {
+      display: block;
+      margin-right: 0;
+      margin-bottom: 2em;
+    }
   }
 }
 
+.daycare-by-the-hour-frame {
+  iframe {
+    height: 855px;
+  }
+}
+
+.daycare-by-the-day-frame {
+  iframe {
+    height: 750px;
+  }
+}
+
+.daycare-theme-days-frame {
+  iframe {
+    height: 750px;
+  }
+}
+
+.contact {
+  margin-bottom: 2em;
+  text-align: center;
+}
+
 @media screen and (min-width: $screen-xs-min) {
-  .daycare-frame {
+  .structure {
+    content-toggle {
+      .toggle-item {
+        display: inline-block;
+        margin-right: 2em;
+      }
+    }
+  }
+
+  .daycare-by-the-hour-frame {
     iframe {
-      height: 1135px;
+      height: 770px;
+    }
+  }
+
+  .daycare-by-the-day-frame {
+    iframe {
+      height: 670px;
+    }
+  }
+
+  .daycare-theme-days-frame {
+    iframe {
+      height: 670px;
     }
   }
 }
 
 @media screen and (min-width: $screen-sm-min) {
-  .daycare-frame {
+  .daycare-by-the-hour-frame {
     iframe {
-      height: 1095px;
+      height: 730px;
     }
   }
 }
 
 @media screen and (min-width: $screen-md-min) {
-  .daycare-frame {
+  .daycare-by-the-hour-frame {
     iframe {
-      height: 1070px;
+      height: 710px;
+    }
+  }
+
+  .daycare-by-the-day-frame {
+    iframe {
+      height: 650px;
+    }
+  }
+}
+
+@media screen and (min-width: $screen-lg-min) {
+  .daycare-by-the-hour-frame {
+    iframe {
+      height: 690px;
     }
   }
 }

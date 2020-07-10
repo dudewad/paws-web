@@ -34,6 +34,10 @@
                                 "copy": "Paws Store"
                             },
                             {
+                                "routerLink": "/daycare",
+                                "copy": "Doggy Daycare"
+                            },
+                            {
                                 "routerLink": "/membership",
                                 "copy": "Membership"
                             },
