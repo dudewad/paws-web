@@ -17,7 +17,7 @@
       },
       "content": {
         "title": "Dog Daycare At Paws",
-        "body": "Daycare offered Monday-Friday 10am-2pm. Hourly slots available every half hour."
+        "body": "Hourly slots available every half hour."
       }
     },
     {
@@ -53,7 +53,7 @@
           },
           {
             "target": "daycare-theme-days",
-            "button": "Theme Days"
+            "button": "Puppy Play"
           }
         ]
       }
