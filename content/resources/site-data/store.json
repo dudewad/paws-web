@@ -1,31 +1,18 @@
 {
     "config": {
-        "header": true,
-        "footer": true,
+        "header": false,
+        "footer": false,
         "mainMenu": false
     },
     "component": [
         {
-            "type": "Hero",
+            "type": "Copy",
             "config": {
-                "class": [
-                    "compensate-header",
-                    "text-bg"
-                ],
-                "background": {
-                    "style": "image",
-                    "value": "/structure-bg-red-heeler.jpg",
-                    "responsive": true
-                }
+                "class": ["store"]
             },
             "content": {
-                "title": "Paws Store"
+                "body": "<iframe src='https://pawsforabeer.square.site/' frameborder='0' allowfullscreen></iframe>"
             }
-        },
-        {
-            "type": "EcwidStore",
-            "config": {},
-            "content": {}
         }
     ]
 }

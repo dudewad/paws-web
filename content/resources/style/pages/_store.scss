@@ -1,0 +1,22 @@
+@import '../../../../style/bootstrap-custom/bootstrap-no-output';
+
+.store {
+  .structure-content,
+  .container,
+  .col-xs-12,
+  .row,
+  p {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .container {
+    width: 100% !important;
+  }
+
+  iframe {
+    position: fixed;
+    top: 0;
+    height: 100% !important;
+  }
+}
