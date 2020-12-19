@@ -30,7 +30,7 @@
                         "title": "Resources",
                         "items": [
                             {
-                                "routerLink": "/store",
+                                "href": "https://pawsforabeer.square.site/",
                                 "copy": "Paws Store"
                             },
                             {

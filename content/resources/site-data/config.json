@@ -8,8 +8,7 @@
         "/daycare": "daycare.json",
         "/membership": "membership.json",
         "/rules": "rules.json",
-        "/ski-to-sea": "ski-to-sea.json",
-        "/store": "store.json"
+        "/ski-to-sea": "ski-to-sea.json"
     },
     "vendor": {
         "googleMaps": {

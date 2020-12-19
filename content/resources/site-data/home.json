@@ -38,11 +38,8 @@
       },
       "content": {
         "title": "Paws Store",
-        "subtitle": "Shop for beer and cider here!",
-        "cta": {
-          "text": "Shop Now",
-          "href": "/store"
-        }
+        "subtitle": "Shop for apparel, gear, and beer",
+        "body": "<a href='https://pawsforabeer.square.site/' target='_blank' class='button'>Shop Now</a>"
       }
     },
     {
