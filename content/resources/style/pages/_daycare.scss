@@ -11,20 +11,14 @@
 }
 
 .daycare-by-the-hour-frame {
-  iframe {
-    height: 855px;
+  &.copy {
+    .structure-content {
+      padding-top: 0;
+    }
   }
-}
 
-.daycare-by-the-day-frame {
   iframe {
-    height: 750px;
-  }
-}
-
-.daycare-theme-days-frame {
-  iframe {
-    height: 750px;
+    height: 540px;
   }
 }
 
@@ -45,19 +39,7 @@
 
   .daycare-by-the-hour-frame {
     iframe {
-      height: 770px;
-    }
-  }
-
-  .daycare-by-the-day-frame {
-    iframe {
-      height: 670px;
-    }
-  }
-
-  .daycare-theme-days-frame {
-    iframe {
-      height: 670px;
+      height: 530px;
     }
   }
 }
@@ -65,7 +47,7 @@
 @media screen and (min-width: $screen-sm-min) {
   .daycare-by-the-hour-frame {
     iframe {
-      height: 730px;
+      height: 530px;
     }
   }
 }
@@ -73,13 +55,7 @@
 @media screen and (min-width: $screen-md-min) {
   .daycare-by-the-hour-frame {
     iframe {
-      height: 710px;
-    }
-  }
-
-  .daycare-by-the-day-frame {
-    iframe {
-      height: 650px;
+      height: 470px;
     }
   }
 }
@@ -87,7 +63,7 @@
 @media screen and (min-width: $screen-lg-min) {
   .daycare-by-the-hour-frame {
     iframe {
-      height: 690px;
+      height: 450px;
     }
   }
 }

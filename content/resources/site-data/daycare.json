@@ -16,8 +16,8 @@
         }
       },
       "content": {
-        "title": "Dog Daycare At Paws",
-        "body": "Hourly slots available every half hour."
+        "title": "Puppy Play Groups<br>At Paws",
+        "body": "Weekly socialization sessions"
       }
     },
     {
@@ -26,36 +26,9 @@
         "class": ["daycare-frame"]
       },
       "content": {
-        "title": "Need a dog daycare?",
-        "subtitle": "We've got your back.",
-        "body": "<p>Select your preferred daycare options below. We're excited to see you and your dog soon!</p><p><small>NOTE: If you've never been to Daycare at Paws and you have never been to Paws For A Beer and you would like your dog to attend daycare, then please visit us during Bar hours. A successful visit to Paws For A Beer clears your dog to attend Daycare at Paws. If you have any questions, please feel free to contact us!</small></p>"
-      }
-    },
-    {
-      "type": "ContentToggle",
-      "config": {
-        "id": "once-a-week-group",
-        "defaultTarget": "none",
-        "disableTargetsOnHide": true,
-        "class": [
-          "text-center"
-        ]
-      },
-      "content": {
-        "toggles": [
-          {
-            "target": "daycare-by-the-hour",
-            "button": "By the Hour"
-          },
-          {
-            "target": "daycare-by-the-day",
-            "button": "By the Day"
-          },
-          {
-            "target": "daycare-theme-days",
-            "button": "Puppy Play"
-          }
-        ]
+        "title": "Where a Puppy can be a Puppy",
+        "subtitle": "Watch them grow in confidence",
+        "body": "<p>Important puppy play with other puppies around the same age</p><p><small>Note: All dogs must be under 6 months of age. MUST be up to date on vaccinations. <strong>Proof of vaccinations required upon first visit.</strong> If you have any questions, please feel free to contact us!</small></p>"
       }
     },
     {
@@ -68,30 +41,6 @@
       },
       "content": {
         "body": "<div class='frame-wrapper'><iframe class='scheduler-frame' src='https://app.acuityscheduling.com/schedule.php?owner=18939947&calendarID=3868539' title='Schedule Appointment' frameborder='0' allowfullscreen></iframe><script src=\"https://embed.acuityscheduling.com/js/embed.js\" type=\"text/javascript\"></script></div>"
-      }
-    },
-    {
-      "type": "Copy",
-      "config": {
-        "id": "daycare-by-the-day",
-        "class": [
-          "daycare-by-the-day-frame"
-        ]
-      },
-      "content": {
-        "body": "<div class='frame-wrapper'><iframe class='scheduler-frame' src='https://app.acuityscheduling.com/schedule.php?owner=18939947&calendarID=3576065' title='Schedule Appointment' frameborder='0' allowfullscreen></iframe><script src=\"https://embed.acuityscheduling.com/js/embed.js\" type=\"text/javascript\"></script></div>"
-      }
-    },
-    {
-      "type": "Copy",
-      "config": {
-        "id": "daycare-theme-days",
-        "class": [
-          "daycare-theme-days-frame"
-        ]
-      },
-      "content": {
-        "body": "<div class='frame-wrapper'><iframe class='scheduler-frame' src='https://app.acuityscheduling.com/schedule.php?owner=18939947&calendarID=4177278' title='Schedule Appointment' frameborder='0' allowfullscreen></iframe><script src=\"https://embed.acuityscheduling.com/js/embed.js\" type=\"text/javascript\"></script></div>"
       }
     },
     {
