@@ -13,17 +13,28 @@
         ],
         "background": {
           "style": "image",
-          "value": "/structure-bg-dog-nose.jpg",
+          "value": "/structure-bg-blue-eyes.jpg",
           "responsive": true
         }
       },
       "content": {
-        "title": "Dog Daycare at Paws",
+        "title": "Puppy Play at Paws",
         "subtitle": "Puppy play signup",
         "cta": {
           "text": "Sign Up",
           "href": "/daycare"
         }
+      }
+    },
+    {
+      "type": "Copy",
+      "config": {
+        "class": ["text-center", "theme-brand-primary"]
+      },
+      "content": {
+        "title": "Paws Events",
+        "subtitle": "Get event tickets here",
+        "body": "<a href='https://pawsforabeer.simpletix.com/' target='_blank' class='button theme-brand-secondary'>Tickets</a>"
       }
     },
     {

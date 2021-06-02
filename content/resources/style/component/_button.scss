@@ -1,0 +1,19 @@
+@import "../variables";
+
+button,
+.button {
+  &.theme-brand-secondary {
+    color: map_get($base_colors-overrides, white);
+    background: map_get($base-colors-overrides, brand-secondary);
+
+    &:hover {
+      color: map_get($base_colors-overrides, white);
+      background: darken(map_get($base-colors-overrides, brand-secondary), 4%);
+    }
+
+    &:active {
+      color: map_get($base_colors-overrides, white);
+      background: darken(map_get($base-colors-overrides, brand-secondary), 8%);
+    }
+  }
+}

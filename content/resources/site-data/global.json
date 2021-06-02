@@ -27,6 +27,15 @@
                         ]
                     },
                     {
+                        "title": "Events",
+                        "items": [
+                            {
+                                "href": "https://pawsforabeer.simpletix.com/",
+                                "copy": "Tickets"
+                            }
+                        ]
+                    },
+                    {
                         "title": "Resources",
                         "items": [
                             {
@@ -65,15 +74,6 @@
                             {
                                 "href": "http://www.alternativehumanesociety.com/",
                                 "copy": "Alternative Humane Society"
-                            }
-                        ]
-                    },
-                    {
-                        "title": "Things We Like",
-                        "items": [
-                            {
-                                "href": "http://rylanschoen.com/",
-                                "copy": "Rylan Schoen Photography"
                             }
                         ]
                     }
